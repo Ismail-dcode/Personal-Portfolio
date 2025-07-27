@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="myportfo.css">
+
+    <script src="https://kit.fontawesome.com/944d189c85.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <div id="header">
+        <div class="container">
+            <nav>
+                <div id="menu-btn" onclick="toggleMenu()">
+
+                    <i class="fas fa-bars"></i>
+                </div>
+                <br>
+                <div class="social-icons-nav">
+                    <a href="https://www.linkedin.com/in/ismail-shaikh-19798a335/" target="_blank">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/Ismail-dcode" target="_blank">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://hub.docker.com/u/ismaildcode" target="_blank">
+                        <i class="fa-brands fa-docker"></i>
+                    </a>
+                    <a href="https://x.com/Ismail_dcode/" target="_blank">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                </div>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#Eduction">Education & Skills</a></li>
+                    <li><a href="#Contact">Contact Me</a></li>
+
+
+
+
+                    <i id="sir" class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+            </nav>
+        </div>
+
+    </div>
+    <div>
+        <div class="header-text">
+            <p>CS Engineering Student</p>
+            <h1>Here , I'm <br><span>Shaikh Ismail</span></h1>
+
+            <span id="element"></span>
+
+            <br>
+            <a href="assets/Ismail-new-Resume 2.pdf" download class="btn btn2">Resume</a>
+        </div>
+    </div>
+    <!------------------------------------------------------------------------------------------------------------------------>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="assets/myAbout.jpg">
+                </div>
+                <div class="about-col-2">
+                    <div class="sec1">
+
+                        <h1 class="sub-title">About Me</h1>
+                        <br>
+                        <p> My name is<span class="class"> SHAIKH ISMAIL SARDAR</span> Computer Science Engineering
+                            Student at Maharashtra Institute of Technology, Aurangabad/Chh.
+                            Sambhaji Nagar.
+                            <br>
+                            <br>
+                            know about <span class="class">Development & automation </span>  Frameworks like React
+                            Native, Node.js and JavaScript.
+                            Passionate about exploring new Development and Automation tools like<span class="class">Docker , Github Action </span> & staying updated with
+                            industry trends.
+                            <br>
+                            <br>
+                            Looking for opportunities to gain hands-on experience and build scalable applications.
+                            <br>
+                            <br>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <br>
+            <br>
+
+            <div class="sec2">
+                <h1 id="Eduction"></h1>
+
+                <h1 class="sub-title">Skills & Education</h1>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <br>
+                    <div class="skills-container">
+                        <div class="skill-category">
+                            <h3>Development</h3>
+                            <div class="skills-grid">
+                                <span class="skill-tag"><i class="fas fa-code"></i> Front-end Development</span>
+                                <span class="skill-tag"><i class="fas fa-cogs"></i> Automation </span>
+                                <span class="skill-tag"><i class="fab fa-docker"></i> Containerization</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h3>Languages & Frameworks</h3>
+                            <div class="skills-grid">
+                                <span class="skill-tag"><i class="fab fa-js"></i> JavaScript</span>
+                                <span class="skill-tag"><i class="fas fa-code"></i> C++/C</span>
+                                <span class="skill-tag"><i class="fab fa-html5"></i> HTML |  <i class="fab fa-css3-alt"></i> CSS</span>
+                                <span class="skill-tag"><i class="fab fa-node-js"></i> Node.js</span>
+                                <span class="skill-tag"><i class="fas fa-terminal"></i> Bash</span>
+                                <span class="skill-tag"><i class="fab fa-python"></i> Python</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h3>Technologies & Tools</h3>
+                            <div class="skills-grid">
+                                <span class="skill-tag"><i class="fab fa-linux"></i> Linux</span>
+                                <span class="skill-tag"><i class="fab fa-git-alt"></i> Git | <i class="fab fa-github"></i> Github</span>
+                                <span class="skill-tag"><i class="fab fa-android"></i> Android Studio </span>
+                                <span class="skill-tag"><i class="fas fa-cloud"></i> Vercel</span>
+                                <span class="skill-tag"><i class="fab fa-docker"></i> Docker </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-contents" id="education">
+                    <div class="education-container">
+                        <div class="education-category">
+                            <h3>Current Education</h3>
+                            <div class="education-item">
+                                <span class="education-period">2023-2027</span>
+                                <h4>Computer Science Engineering</h4>
+                                <p>Maharashtra Institute of Technology</p>
+                                <p class="education-location">Aurangabad/Chh. Sambhaji Nagar</p>
+                            </div>
+                        </div>
+
+                        <div class="education-category">
+                            <h3>Previous Education</h3>
+                            <div class="education-item">
+                                <span class="education-period">Till 2023</span>
+                                <h4>Higher Secondary Education (10+2)</h4>
+                                <p>Udaygiri Vidyalaya & Junior College</p>
+                                <p class="education-location">Udgir, Dist. Latur</p>
+                            </div>
+                        </div>
+
+                        <div class="education-category">
+                            <h3>Expected</h3>
+                            <div class="education-item">
+                                <span class="education-period">2027</span>
+                                <h4>B.Tech Graduation</h4>
+                                <p>Computer Science Engineering</p>
+                                <p class="education-location">MIT, Aurangabad/Chh. Sambhaji Nagar</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            </section>
+
+        </div>
+
+    </div>
+
+    <section id="projects">
+        <h1 class="Section-title">My <span>Works</span></h1>
+        <div class="projects-container">
+
+            <div class="project-card">
+                <div class="project-img">
+                    <img src="assets/Project-1.png" alt="Project 1">
+                </div>
+                <div class="project-content">
+                    <h3>Portfolio Website</h3>
+                    <p>A modern portfolio website built with HTML, CSS, and JavaScript featuring smooth animations and
+                        responsive design.
+                        <br><br>
+                        Welcome to my portfolio! showcasing my projects in web and mobile development.
+                        Explore my work in app development inProgress, UI design, built using
+                        technologies like React Native, Node.js."
+                    </p>
+                    <div class="project-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Ismail-dcode/Myportfolio" class="github-btn" target="_blank">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="project-card">
+                <div class="project-img">
+                    <img src="assets/project-3.png" alt="Project 2">
+                </div>
+                <div class="project-content">
+                    <h3>PIXEL-GenAi</h3>
+                    <p>AI Image Generator is a web-based application that
+                        leverages the power of advanced AI models for image generation. It allows users to input text
+                        prompts, which are then processed by an AI API to generate unique and high-quality images</p>
+                    <div class="project-tags">
+                        <span>JavaScript</span>
+                        <span>Fetch API</span>
+                        <span>Hugging Face APIs</span>
+                        <span>Advanced AI Models</span>
+
+                    </div>
+                    <div class="project-links">
+                        <a href=" https://ismail-dcode.github.io/PIXEL-GenAi_AI-Model-learnings/" class="demo-btn"
+                            target="_blank">Live
+                            Demo</a>
+                        <a href="https://github.com/Ismail-dcode/PIXEL-GenAi_AI-Model-learnings" class="github-btn"
+                            target="_blank">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="project-card">
+                <div class="project-img">
+                    <img src="assets/Project-III.png" alt="Project 2">
+                </div>
+                <div class="project-content">
+                    <h3>CodeByte [ AI-Hackathon Final Prototype ]</h3>
+                    <p>Our team <span class="class">DevStrom</span> participated in the Technophilia 2025 AI Hackathon
+                        at MIT College, Aurangabad, and developed a powerful AI software that transforms UI images or
+                        sketches
+                        into frontend boilerplate code (HTML/CSS). This tool empowers developers and designers by
+                        automating the process of
+                        converting wireframes or UI mockups into clean, production-ready code.</p>
+                    <div class="project-tags">
+                        <span>JavaScript</span>
+                        <span>Node JS APP</span>
+                        <span>Google AI Studio</span>
+                        <span>AI Tools</span>
+                        <span>Advanced AI Models</span>
+                        <span>APIs</span>
+
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Ismail-dcode/Day-Hackathon-Local" class="github-btn"
+                            target="_blank">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="Contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Let's Connect </h1>
+                    <p><i class="fa-regular fa-envelope"></i>ismailpromt2i@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i> +91 7719877580</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/ismail-shaikh-19798a335/" target="_blank"><i
+                                class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/Ismail-dcode" target="_blank"><i
+                                class="fa-brands fa-github"></i></a>
+                                <a href="https://x.com/Ismail_dcode/" target="_blank">
+                                    <i class="fa-brands fa-x-twitter"></i>
+                                </a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your email" required>
+                        <textarea name="message" row="6" placeholder="your message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p class="copyright">© 2024 designed & Developed by <span class="class">Shaikh Ismail</span> . All rights
+            reserved.</p>
+    </div>
+
+
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Aspiring DevOps Engineer', ' Development || Automation '],
+            typeSpeed: 50,
+        })
+    </script>
+    <script src="newport.js"></script>
+
+
+    <!-- hi i am new contributor -->
+</body>
+
+</html>
