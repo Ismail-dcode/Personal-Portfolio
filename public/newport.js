@@ -15,12 +15,18 @@ function opentab(tabname) {
 var sidemenu = document.getElementById("sidemenu");
 
 function openmenu() {
-    sidemenu.style.right = "0";
-
+    sidemenu.classList.add('show');
 }
-function closemenu() {
-    sidemenu.style.right = "-200px";
 
+function closemenu() {
+    sidemenu.classList.remove('show');
+    // Remove any inline styles that might override CSS
+    sidemenu.style.right = '';
+    // Reset menu button icon to bars
+    const menuBtn = document.getElementById('menu-btn');
+    if (menuBtn) {
+        menuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+    }
 }
 
 const scriptURL = 'https://script.google.com/macros/s/AKfycbzEDwOQHI0-l9yLrefuSVl7VpskI-3XnQRR11T9ryoUTGrwuARKzeobpxFT6gNAxzW0ew/exec'
@@ -42,12 +48,16 @@ form.addEventListener('submit', e => {
 
 
 function toggleMenu() {
-    const menu = document.querySelector('nav ul');
+    const menu = document.getElementById('sidemenu');
     const menuBtn = document.getElementById('menu-btn');
     
+    // Remove any inline styles that might override CSS
+    menu.style.right = '';
+    
+    // Toggle the show class
     menu.classList.toggle('show');
     
-   
+    // Update menu button icon
     if (menu.classList.contains('show')) {
         menuBtn.innerHTML = '<i class="fas fa-times"></i>';
     } else {
@@ -55,9 +65,8 @@ function toggleMenu() {
     }
 }
 
-
 document.addEventListener('click', (e) => {
-    const menu = document.querySelector('nav ul');
+    const menu = document.getElementById('sidemenu');
     const menuBtn = document.getElementById('menu-btn');
     
     if (!menu.contains(e.target) && !menuBtn.contains(e.target) && menu.classList.contains('show')) {
@@ -67,14 +76,10 @@ document.addEventListener('click', (e) => {
 
 document.querySelectorAll('nav ul li a').forEach(link => {
     link.addEventListener('click', () => {
-        const menu = document.querySelector('nav ul');
+        const menu = document.getElementById('sidemenu');
         if (menu.classList.contains('show')) {
             toggleMenu();
         }
     });
 });
-function toggleMenu() {
-    const menu = document.querySelector('nav ul');
-    menu.classList.toggle('show');
-}
     

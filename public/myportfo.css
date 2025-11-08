@@ -135,6 +135,10 @@ nav {
     width: 140px;
 }
 
+#menu-btn {
+    display: none;
+}
+
 nav ul {
     display: flex;
     gap: 2rem;
@@ -572,10 +576,6 @@ form .btn2 {
     color: rgb(130, 12, 130);
 }
 
-nav #sir {
-    display: none;
-
-}
 
 /* <!-------------------------------------------------------------------------> */
 @media only screen and (max-width:600px) {
@@ -603,12 +603,6 @@ nav #sir {
         font-size: 45px;
     }
 
-    nav #sir {
-
-        display: block;
-        font-size: 25px;
-        color: #fff;
-    }
 
     nav ul {
         background: rgb(130, 12, 130);
@@ -627,12 +621,6 @@ nav #sir {
         margin: 25px;
     }
 
-    nav ul #sir {
-        position: absolute;
-        top: 25px;
-        left: 25px;
-        cursor: pointer;
-    }
 
     .sub-title {
         font-size: 40px;
@@ -958,15 +946,30 @@ nav #sir {
 
    
     #menu-btn {
-        display: block;
+        display: flex;
         position: fixed;
         top: 20px;
         right: 20px;
         z-index: 1000;
         background: rgba(130, 12, 130, 0.8);
-        padding: 10px;
+        padding: 15px 18px;
+        min-width: 48px;
+        min-height: 48px;
         border-radius: 5px;
         cursor: pointer;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.3s ease;
+    }
+    
+    #menu-btn:hover {
+        background: rgba(130, 12, 130, 1);
+    }
+    
+    #menu-btn i {
+        font-size: 20px;
+        color: #fff;
+        pointer-events: none;
     }
 
     
