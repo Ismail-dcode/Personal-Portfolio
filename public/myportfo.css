@@ -1044,6 +1044,10 @@ form .btn2 {
         font-size: 16px;
     }
 
+    .reveal {
+        transition: opacity 0.45s ease, transform 0.45s ease;
+    }
+
     .journey-section {
         margin-top: 25px;
     }
