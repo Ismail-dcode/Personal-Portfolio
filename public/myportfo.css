@@ -382,17 +382,6 @@ nav ul li a:active {
     transform: translateY(-2px);
 }
 
-.reveal {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.9s ease, transform 0.9s ease;
-}
-
-.reveal.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
 .timeline {
     position: relative;
     margin-top: 25px;
@@ -1044,9 +1033,6 @@ form .btn2 {
         font-size: 16px;
     }
 
-    .reveal {
-        transition: opacity 0.45s ease, transform 0.45s ease;
-    }
 
     .journey-section {
         margin-top: 25px;
