@@ -21,7 +21,7 @@ const Hero = () => {
             transition={{ duration: 0.5 }}
             className="mb-4"
           >
-            <span className="text-primary font-medium tracking-wider uppercase text-sm">Welcome to my portfolio</span>
+            <span className="text-primary font-medium tracking-wider uppercase text-sm">Welcome! Nice to connect with you.</span>
           </motion.div>
 
           <motion.h1
