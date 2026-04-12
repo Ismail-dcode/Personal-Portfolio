@@ -38,9 +38,16 @@ const Navbar = () => {
               to="hero"
               smooth={true}
               duration={500}
-              className="text-2xl font-bold text-white cursor-pointer"
+              className="group relative flex items-baseline text-2xl font-bold tracking-tight cursor-pointer"
             >
-              <span className="text-primary">&lt;</span>Ismail Shaikh<span className="text-primary">/&gt;</span>
+              <div className="absolute -inset-2 bg-primary/20 blur-lg rounded-full opacity-0 group-hover:opacity-100 transition duration-500"></div>
+              <span className="relative text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-fuchsia-500 transition-all duration-300">
+                Ismail
+              </span>
+              <span className="relative text-primary animate-pulse font-black ml-1 mr-1">.</span>
+              <span className="relative text-slate-300 group-hover:text-white transition-colors duration-300">
+                Shaikh
+              </span>
             </Link>
           </div>
 
