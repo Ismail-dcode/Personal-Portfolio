@@ -28,7 +28,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"
+            className="text-4xl sm:text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"
           >
              I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-[#21d4fd] text-glow">Shaikh Ismail</span>
           </motion.h1>
@@ -37,7 +37,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-2xl md:text-3xl text-slate-300 mb-6 font-medium"
+            className="text-xl sm:text-2xl md:text-3xl text-slate-300 mb-6 font-medium"
           >
             Cloud & DevOps Engineer <span className="text-slate-500">(Enthusiast)</span>
           </motion.h2>
@@ -46,7 +46,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="text-lg text-slate-400 mb-10 max-w-2xl mx-auto"
+            className="text-base sm:text-lg text-slate-400 mb-10 max-w-2xl mx-auto"
           >
             "I explore & build scalable applications containerize & automate deployments using cloud-native technologies."
             <br /><span className="text-sm mt-2 block text-primary/80">AWS | Docker | Linux </span>

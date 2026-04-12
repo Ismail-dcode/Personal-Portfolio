@@ -41,7 +41,7 @@ const About = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="lg:col-span-7 bg-cardBg/50 p-8 rounded-2xl border border-slate-800 backdrop-blur-sm hover:border-slate-700 transition-colors"
+            className="lg:col-span-7 bg-cardBg/50 p-6 sm:p-8 rounded-2xl border border-slate-800 backdrop-blur-sm hover:border-slate-700 transition-colors"
           >
             <h3 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
               <span className="text-primary">I'm</span> Shaikh Ismail Sardar

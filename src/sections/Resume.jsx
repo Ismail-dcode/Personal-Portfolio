@@ -16,7 +16,7 @@ const Resume = () => {
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          className="mt-12 bg-cardBg border border-slate-700/50 rounded-2xl p-8 text-center shadow-lg hover:shadow-primary/5 transition-all"
+          className="mt-12 bg-cardBg border border-slate-700/50 rounded-2xl p-6 sm:p-8 text-center shadow-lg hover:shadow-primary/5 transition-all"
         >
           <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
             <FaFileDownload className="text-3xl text-primary" />

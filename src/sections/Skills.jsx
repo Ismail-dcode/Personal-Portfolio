@@ -84,7 +84,7 @@ const Skills = () => {
               variants={{
                 visible: { transition: { staggerChildren: 0.1, delayChildren: index * 0.1 } }
               }}
-              className="bg-cardBg rounded-2xl p-6 border border-slate-800 hover:border-primary/50 transition-colors shadow-lg"
+              className="bg-cardBg rounded-2xl p-5 sm:p-6 border border-slate-800 hover:border-primary/50 transition-colors shadow-lg"
             >
               <h3 className="text-xl font-semibold mb-6 flex items-center text-white border-b border-slate-700/50 pb-3">
                 <span className="w-8 h-1 bg-primary rounded-full mr-3 inline-block"></span>

@@ -54,7 +54,7 @@ const Projects = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group bg-cardBg rounded-xl p-8 border border-slate-800 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 relative overflow-hidden"
+              className="group bg-cardBg rounded-xl p-6 sm:p-8 border border-slate-800 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 relative overflow-hidden flex flex-col h-full"
             >
               {/* Highlight gradient on hover */}
               <div className="absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r from-primary to-[#21d4fd] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
@@ -80,7 +80,7 @@ const Projects = () => {
                 </p>
               </div>
 
-              <div className="flex flex-wrap gap-2 mb-8">
+              <div className="flex flex-wrap gap-2 mb-6">
                 {project.techStack.map((tech, tIdx) => (
                   <span key={tIdx} className="px-3 py-1 bg-slate-800 text-xs font-medium text-slate-300 rounded-full border border-slate-700">
                     {tech}
@@ -88,7 +88,7 @@ const Projects = () => {
                 ))}
               </div>
 
-              <div className="absolute bottom-6 right-8 flex gap-4">
+              <div className="mt-auto pt-4 flex gap-4 justify-end relative z-10 w-full border-t border-slate-800/50">
                 {project.githubURL && (
                   <a
                     href={project.githubURL}

@@ -83,7 +83,7 @@ const Contact = () => {
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="bg-cardBg p-8 rounded-2xl border border-slate-800 shadow-xl"
+            className="bg-cardBg p-6 sm:p-8 rounded-2xl border border-slate-800 shadow-xl"
           >
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
