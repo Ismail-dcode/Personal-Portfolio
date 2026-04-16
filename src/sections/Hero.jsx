@@ -68,7 +68,7 @@ const Hero = () => {
               View Projects
             </Link>
             <a
-              href="assets/Updated-My-Resume.pdf"
+              href="assets/Resume_1.pdf"
               download
               className="w-full sm:w-auto px-8 py-3 bg-cardBg border border-slate-700 hover:border-primary text-white font-medium rounded-lg transition-all cursor-pointer"
             >
