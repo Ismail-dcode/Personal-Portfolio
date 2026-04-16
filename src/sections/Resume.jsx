@@ -37,7 +37,7 @@ const Resume = () => {
               <FaEye /> Preview
             </a>
             <a 
-              href="assets/Updated-My-Resume.pdf" 
+              href="assets/Resume_1.pdf" 
               download
               className="w-full sm:w-auto flex items-center justify-center gap-2 px-8 py-3 bg-primary hover:bg-sky-400 text-slate-900 font-bold rounded-lg transition-colors"
             >
