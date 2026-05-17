@@ -49,19 +49,19 @@ const About = () => {
 
             <div className="space-y-4 text-slate-400 text-lg leading-relaxed">
               <p>
-                A Computer Science Engineering student at Maharashtra Institute of Technology, focused on building robust infrastructures and automating software delivery lifecycle.
-              </p>
+                I am a Computer Science student focused on Cloud and DevOps technologies. I enjoy building environments where applications can run reliably and efficiently.              </p>
               <p>
-                My passion lies in <span className="text-white font-medium">Cloud computing, DevOps, and Automation</span>. I enjoy optimizing deployment workflows, building fault-tolerant cloud architectures, and exploring how systems integrate efficiently in real-world environments.
+                My work includes deploying applications, managing Linux systems, working with containers, automating repetitive tasks, and improving software delivery workflows. I focus on making the behind-the-scenes magic happen so that users have a seamless experience.
               </p>
+              <p>I enjoy solving infrastructure and deployment problems while continuously learning new cloud technologies. My goal is to bridge the gap between development and operations in a way that makes sense to everyone.</p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6 pt-6 border-t border-slate-700/50">
                 <div className="bg-darkBg/50 p-4 rounded-xl border border-slate-800">
-                  <h4 className="text-primary font-semibold mb-1">Focus Areas</h4>
+                  <h4 className="text-primary font-semibold mb-1">What I Build</h4>
                   <ul className="list-disc list-inside text-sm text-slate-300">
-                    <li>Cloud Native Architecture</li>
-                    <li>Containerization</li>
-                    <li>Deployment</li>
+                    <li>Reliable deployment pipelines</li>
+                    <li>containerized environments</li>
+                    <li> cloud infrastructure.</li> 
                   </ul>
                 </div>
                 <div className="bg-darkBg/50 p-4 rounded-xl border border-slate-800">

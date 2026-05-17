@@ -30,7 +30,7 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-4xl sm:text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"
           >
-             I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-[#21d4fd] text-glow">Shaikh Ismail</span>
+            I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-[#21d4fd] text-glow">Shaikh Ismail</span>
           </motion.h1>
 
           <motion.h2
@@ -48,7 +48,7 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="text-base sm:text-lg text-slate-400 mb-10 max-w-2xl mx-auto"
           >
-            "I explore & build scalable applications containerize & automate deployments using cloud-native technologies."
+            "I help deploy, manage, and automate software applications. By working with Linux, Docker, and cloud platforms, I make sure deployments are fast, reliable, and scalable."
             <br /><span className="text-sm mt-2 block text-primary/80">AWS | Docker | Linux </span>
           </motion.p>
 
