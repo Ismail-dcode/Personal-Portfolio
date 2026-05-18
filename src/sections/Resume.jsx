@@ -29,7 +29,7 @@ const Resume = () => {
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a 
-              href="assets/Resume_1.pdf" 
+              href="assets/CLOUD_Resume_1.pdf" 
               target="_blank" 
               rel="noopener noreferrer"
               className="w-full sm:w-auto flex items-center justify-center gap-2 px-8 py-3 bg-slate-800 hover:bg-slate-700 text-white font-medium rounded-lg transition-colors border border-slate-600"
@@ -37,7 +37,7 @@ const Resume = () => {
               <FaEye /> Preview
             </a>
             <a 
-              href="assets/Resume_1.pdf" 
+              href="assets/CLOUD_Resume_1.pdf" 
               download
               className="w-full sm:w-auto flex items-center justify-center gap-2 px-8 py-3 bg-primary hover:bg-sky-400 text-slate-900 font-bold rounded-lg transition-colors"
             >
