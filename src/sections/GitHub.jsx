@@ -1,94 +1,206 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import SectionHeading from '../components/SectionHeading';
-import { FaGithub, FaStar, FaCodeBranch, FaBook } from 'react-icons/fa';
+import { FaGithub, FaStar, FaCodeBranch, FaCode } from 'react-icons/fa';
+import { portfolioData } from '../data/portfolioData';
+import SectionTitle from '../components/SectionTitle';
+import GlassCard from '../components/GlassCard';
+
 
 const GitHub = () => {
-  return (
-    <section id="github" className="py-20 bg-darkBg relative border-t border-slate-800/50">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionHeading 
-          title="GitHub Contributions" 
-          subtitle="Check out my open-source activity and repositories." 
-        />
-        
-        <div className="mt-12">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="bg-cardBg border border-slate-700/50 rounded-2xl p-6 md:p-10 shadow-2xl overflow-hidden relative"
-          >
-            {/* Background design */}
-            <div className="absolute top-0 right-0 p-12 opacity-5 pointer-events-none">
-              <FaGithub className="w-64 h-64" />
-            </div>
+  const { github } = portfolioData;
 
-            <div className="relative z-10 flex flex-col md:flex-row items-center gap-8 border-b border-slate-700/50 pb-8 mb-8">
-              <img 
-                src="https://github.com/Ismail-dcode.png" 
-                alt="GitHub Profile" 
-                className="w-24 h-24 rounded-full border-4 border-slate-800"
-              />
-              <div className="text-center md:text-left flex-1">
-                <h3 className="text-3xl font-bold text-white">Ismail-dcode</h3>
-                <p className="text-primary mt-1">Cloud & DevOps Enthusiast</p>
-                <div className="flex flex-wrap justify-center md:justify-start gap-4 mt-4">
-                  <div className="flex items-center gap-2 text-slate-400">
-                    <FaBook /> <span>Public Repos</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-slate-400">
-                    <FaStar /> <span>Stars Earned</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-slate-400">
-                    <FaCodeBranch /> <span>Forked Projects</span>
-                  </div>
-                </div>
+  // Mock matrix array for contribution graph grid (7 rows x 26 cols = 182 tiles)
+  const contributionGrid = Array.from({ length: 182 }, (_, i) => {
+    // Generate simulated contribution intensities (0 to 4)
+    const val = (i * 7 + 13) % 11;
+    if (val > 8) return 4;
+    if (val > 5) return 3;
+    if (val > 3) return 2;
+    if (val > 1) return 1;
+    return 0;
+  });
+
+  const levelColors = [
+    'bg-slate-900 border-slate-800',
+    'bg-purple-950 border-purple-800',
+    'bg-purple-800 border-purple-600',
+    'bg-primary border-primary-light',
+    'bg-accentCyan border-cyan-300 shadow-glow-cyan'
+  ];
+
+  return (
+    <section id="github" className="py-14 relative overflow-hidden bg-slate-950/80 border-y border-slate-800/80">
+      {/* Glow accent */}
+      <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[150px] pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <SectionTitle
+          badge="Open Source & Activity"
+          title="GitHub Contributions &"
+          highlight="Code Metrics"
+          subtitle="A snapshot of open-source repositories, activity metrics, pull requests, and multi-language breakdown."
+        />
+
+        {/* 4 Stats Cards */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+          {github.stats.map((stat, idx) => (
+            <GlassCard
+              key={stat.label}
+              delay={idx * 0.08}
+              className="p-5 text-center border border-white/10"
+            >
+              <span className="text-3xl sm:text-4xl font-extrabold text-gradient block mb-1">
+                {stat.value}
+              </span>
+              <span className="text-xs font-mono text-slate-400 uppercase tracking-wider">
+                {stat.label}
+              </span>
+            </GlassCard>
+          ))}
+        </div>
+
+        {/* Contribution Matrix Heatmap Card */}
+        <GlassCard className="p-6 sm:p-8 mb-8 border border-white/10">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 pb-4 border-b border-slate-800">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-xl bg-slate-900 flex items-center justify-center text-white text-xl">
+                <FaGithub />
               </div>
               <div>
-                <a 
-                  href="https://github.com/Ismail-dcode" 
-                  target="_blank" 
+                <h3 className="text-lg font-bold text-white">
+                  Contribution Activity Matrix
+                </h3>
+                <span className="text-xs font-mono text-slate-400">
+                  {github.username} • 240+ Contributions in the last year
+                </span>
+              </div>
+            </div>
+
+            {/* Legend */}
+            <div className="flex items-center gap-2 text-xs text-slate-400 font-mono">
+              <span>Less</span>
+              {levelColors.map((color, i) => (
+                <span key={i} className={`w-3 h-3 rounded-sm border ${color}`} />
+              ))}
+              <span>More</span>
+            </div>
+          </div>
+
+          {/* Grid View of heatmap */}
+          <div className="overflow-x-auto pb-2">
+            <div className="grid grid-rows-7 grid-flow-col gap-1.5 min-w-[640px]">
+              {contributionGrid.map((intensity, cellIdx) => (
+                <div
+                  key={cellIdx}
+                  className={`w-3.5 h-3.5 rounded-sm border ${levelColors[intensity]} hover:scale-125 transition-transform cursor-pointer`}
+                  title={`Simulated activity score: ${intensity}`}
+                />
+              ))}
+            </div>
+          </div>
+        </GlassCard>
+
+        {/* Two Columns: Top Repositories & Language Breakdown */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+          {/* Top Repositories (8 cols) */}
+          <div className="lg:col-span-8 space-y-4">
+            <h3 className="text-lg font-bold text-white flex items-center gap-2">
+              <FaCode className="text-primary" /> Top Open-Source Repositories
+            </h3>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {github.topRepos.map((repo, idx) => (
+                <a
+                  key={repo.name}
+                  href={repo.url || github.profileUrl}
+                  target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-slate-800 hover:bg-slate-700 text-white font-medium rounded-lg transition-colors border border-slate-600"
+                  className="block h-full"
                 >
-                  <FaGithub size={20} /> View Profile
+                  <GlassCard
+                    delay={idx * 0.1}
+                    className="p-5 flex flex-col justify-between h-full border border-white/10 hover:border-primary/40 group transition-all"
+                  >
+                    <div>
+                      <div className="flex items-center justify-between mb-2">
+                        <h4 className="text-sm font-bold text-white group-hover:text-primary-light transition-colors line-clamp-1">
+                          {repo.name}
+                        </h4>
+                        <span className="px-2 py-0.5 rounded bg-primary/10 text-[10px] font-mono text-primary-light shrink-0 ml-2">
+                          {repo.language}
+                        </span>
+                      </div>
+
+                      <p className="text-slate-400 text-xs leading-relaxed line-clamp-2 mb-4">
+                        {repo.description}
+                      </p>
+                    </div>
+
+                    <div className="flex items-center gap-4 text-xs text-slate-400 font-mono pt-3 border-t border-slate-800">
+                      <span className="flex items-center gap-1">
+                        <FaStar className="text-amber-400" /> {repo.stars}
+                      </span>
+                      <span className="flex items-center gap-1">
+                        <FaCodeBranch /> {repo.forks}
+                      </span>
+                    </div>
+                  </GlassCard>
                 </a>
-              </div>
+              ))}
             </div>
+          </div>
 
-            {/* Real Contribution Graph / Stats Images */}
-            <div className="flex flex-col gap-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <img 
-                  src="https://github-readme-stats.vercel.app/api?username=Ismail-dcode&show_icons=true&theme=radium&hide_border=true&bg_color=1a0b2e&title_color=b721ff&icon_color=b721ff"
-                  alt="GitHub Stats" 
-                  className="w-full rounded-lg shadow-lg border border-slate-700/50"
-                  onError={(e) => e.target.style.display = 'none'}
-                />
-                <img 
-                  src="https://github-readme-stats.vercel.app/api/top-langs/?username=Ismail-dcode&layout=compact&theme=radium&hide_border=true&bg_color=1a0b2e&title_color=b721ff"
-                  alt="Top Languages" 
-                  className="w-full rounded-lg shadow-lg border border-slate-700/50"
-                  onError={(e) => e.target.style.display = 'none'}
-                />
-              </div>
+          {/* Languages Breakdown & Recent Activity (4 cols) */}
+          <div className="lg:col-span-4 space-y-6">
+            <GlassCard className="p-6 border border-white/10">
+              <h3 className="text-base font-bold text-white mb-4">
+                Languages Distribution
+              </h3>
 
-              <div className="text-center mt-6">
-                <h4 className="text-xl font-semibold text-white mb-4 text-glow">Contribution Highlights</h4>
-                <div className="overflow-x-auto pb-2">
-                  <img 
-                    src="https://ghchart.rshah.org/b721ff/Ismail-dcode" 
-                    alt="Ismail-dcode's Github chart" 
-                    className="min-w-[700px] w-full max-w-full rounded-lg bg-[#1a0b2e] p-4 border border-slate-700/50 mx-auto" 
-                    onError={(e) => e.target.style.display = 'none'}
+              {/* Progress Stack */}
+              <div className="h-3 w-full rounded-full bg-slate-900 overflow-hidden flex mb-4 border border-slate-800">
+                {github.languages.map((lang) => (
+                  <div
+                    key={lang.name}
+                    style={{ width: `${lang.percentage}%` }}
+                    className={`h-full ${lang.color}`}
+                    title={`${lang.name}: ${lang.percentage}%`}
                   />
-                </div>
-                <p className="text-sm text-slate-400 mt-4 italic">Commit history and activity graph dynamically loaded over time.</p>
+                ))}
               </div>
-            </div>
-            
-          </motion.div>
+
+              {/* Legend List */}
+              <div className="space-y-2 text-xs">
+                {github.languages.map((lang) => (
+                  <div key={lang.name} className="flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                      <span className={`w-2.5 h-2.5 rounded-full ${lang.color}`} />
+                      <span className="text-slate-300 font-medium">{lang.name}</span>
+                    </div>
+                    <span className="font-mono text-slate-400">{lang.percentage}%</span>
+                  </div>
+                ))}
+              </div>
+            </GlassCard>
+
+            {/* Recent Activity Log Placeholder */}
+            <GlassCard className="p-6 border border-white/10">
+              <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">
+                Recent Git Activity Feed
+              </h4>
+              <div className="space-y-3 text-xs">
+                <div className="flex items-start gap-2 text-slate-300">
+                  <FaCode className="text-primary mt-0.5 shrink-0" />
+                  <span>Pushed 3 commits to <code className="text-accentCyan font-mono">main</code> on <span className="text-white font-medium">serverless-aws-boilerplate</span></span>
+                </div>
+                <div className="flex items-start gap-2 text-slate-300">
+                  <FaCode className="text-emerald-400 mt-0.5 shrink-0" />
+                  <span>Merged PR #42: <span className="text-white font-medium">Add WebAssembly data parser</span></span>
+                </div>
+              </div>
+            </GlassCard>
+
+          </div>
         </div>
       </div>
     </section>

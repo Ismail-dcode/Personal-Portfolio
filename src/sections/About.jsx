@@ -1,81 +1,57 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import SectionHeading from '../components/SectionHeading';
+import { FaCertificate } from 'react-icons/fa';
 
 const About = () => {
   return (
-    <section id="about" className="py-20 bg-darkBg relative border-t border-slate-800/50">
+    <section id="about" className="py-14 bg-darkBg relative border-t border-slate-800/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           title="About Me"
-          subtitle="A brief introduction to who I am and what I do."
+          subtitle="A brief introduction to who I am and my credentials."
         />
 
-        <div className="mt-12 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          {/* Avatar/Image Col */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="lg:col-span-5 flex justify-center"
-          >
-            <div className="relative group">
-              <div className="absolute -inset-1 bg-gradient-to-r from-primary to-purple-600 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
-              <div className="relative rounded-2xl overflow-hidden border-2 border-slate-700/50 max-w-sm aspect-[4/5] bg-cardBg">
-                <img
-                  src="assets/Profile-pic.jpeg"
-                  alt="Shaikh Ismail Profile"
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  onError={(e) => {
-                    e.target.src = 'https://via.placeholder.com/400x500?text=Profile+Image';
-                  }}
-                />
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Content Col */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="lg:col-span-7 bg-cardBg/50 p-6 sm:p-8 rounded-2xl border border-slate-800 backdrop-blur-sm hover:border-slate-700 transition-colors"
-          >
-            <h3 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
-              <span className="text-primary">I'm</span> Shaikh Ismail Sardar
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="mt-8 max-w-4xl space-y-6"
+        >
+          <div>
+            <h3 className="text-2xl font-bold text-white mb-2">
+              Shaikh Ismail Sardar
             </h3>
+            <p className="text-accentCyan font-mono text-sm font-semibold">
+              Computer Science & Engineering Student (Expected 2027) | Cloud & DevOps Enthusiast
+            </p>
+          </div>
 
-            <div className="space-y-4 text-slate-400 text-lg leading-relaxed">
-              <p>
-                I am a Computer Science student focused on Cloud and DevOps technologies. I enjoy building environments where applications can run reliably and efficiently.              </p>
-              <p>
-                My work includes deploying applications, managing Linux systems, working with containers, automating repetitive tasks, and improving software delivery workflows. I focus on making the behind-the-scenes magic happen so that users have a seamless experience.
-              </p>
-              <p>I enjoy solving infrastructure and deployment problems while continuously learning new cloud technologies. My goal is to bridge the gap between development and operations in a way that makes sense to everyone.</p>
+          <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
+            I am a Computer Science & Engineering student specializing in AWS Cloud Architecture, Linux System Administration, Docker Containerization, and CI/CD Automation. I focus on building reliable, scalable cloud environments and automating software delivery workflows.
+          </p>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6 pt-6 border-t border-slate-700/50">
-                <div className="bg-darkBg/50 p-4 rounded-xl border border-slate-800">
-                  <h4 className="text-primary font-semibold mb-1">What I Build</h4>
-                  <ul className="list-disc list-inside text-sm text-slate-300">
-                    <li>Reliable deployment pipelines</li>
-                    <li>containerized environments</li>
-                    <li> cloud infrastructure.</li> 
-                  </ul>
-                </div>
-                <div className="bg-darkBg/50 p-4 rounded-xl border border-slate-800">
-                  <h4 className="text-primary font-semibold mb-1">Certifications</h4>
-                  <ul className="list-disc list-inside text-sm text-slate-300">
-                    <li>RHCSA (Red Hat)</li>
-                    <li>Git & GitHub (Udemy)</li>
-
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        </div>
+          <div className="pt-4 border-t border-slate-800/80">
+            <h4 className="text-primary font-bold text-base mb-3 flex items-center gap-2">
+              <FaCertificate className="text-primary" /> Certifications & Training
+            </h4>
+            <ul className="space-y-2.5 text-slate-300 text-sm sm:text-base">
+              <li className="flex items-center gap-3">
+                <span className="w-2 h-2 rounded-full bg-primary shrink-0" />
+                <span><strong className="text-white">RHCSA</strong> (Red Hat Certified System Administrator) Passed [270/300]</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <span className="w-2 h-2 rounded-full bg-accentCyan shrink-0" />
+                <span><strong className="text-white">Cloud(AWS)</strong> SAA-C03 (Pursuing)</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <span className="w-2 h-2 rounded-full bg-accentCyan shrink-0" />
+                <span><strong className="text-white">Redhat(OpenShift)</strong> DO180 (Pursuing)</span>
+              </li>
+            </ul>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

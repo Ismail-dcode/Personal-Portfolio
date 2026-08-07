@@ -1,99 +1,101 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import SectionHeading from '../components/SectionHeading';
-import { FaReact, FaDocker, FaAws, FaGithub } from 'react-icons/fa';
-import { SiGithubactions } from 'react-icons/si';
+import { FaExpand, FaCheckCircle, FaNetworkWired } from 'react-icons/fa';
+import { portfolioData } from '../data/portfolioData';
+import SectionTitle from '../components/SectionTitle';
+import GlassCard from '../components/GlassCard';
+import ArchitectureModal from '../components/ArchitectureModal';
 
 const Architecture = () => {
+  const [selectedArch, setSelectedArch] = useState(null);
+
   return (
-    <section id="architecture" className="py-20 bg-darkBg relative border-t border-slate-800/50 overflow-hidden">
-      {/* Background Grid Pattern */}
-      <div className="absolute inset-0 z-0 opacity-[0.05] pointer-events-none"
-        style={{ backgroundImage: 'radial-gradient(#b721ff 1px, transparent 1px)', backgroundSize: '30px 30px' }}>
-      </div>
+    <section id="architecture" className="py-24 relative overflow-hidden">
+      {/* Background glow */}
+      <div className="absolute top-1/4 left-1/4 w-[450px] h-[450px] bg-accentCyan/10 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <SectionHeading
-          title="Infrastructure Architecture"
-          subtitle="Visual representation of the deployment workflows and CI/CD pipelines I build."
+        <SectionTitle
+          badge="System Design Case Studies"
+          title="Cloud & DevOps"
+          highlight="System Architectures"
+          subtitle="Architectural breakdowns showcasing AWS cloud-native topologies, container orchestration, and automated CI/CD deployment pipelines."
         />
 
-        <div className="mt-16 space-y-20">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {portfolioData.architectures.map((item, idx) => (
+            <GlassCard
+              key={item.id}
+              delay={idx * 0.1}
+              glowColor="cyan"
+              className="flex flex-col justify-between p-0 overflow-hidden group border border-white/10"
+            >
+              {/* Architecture Blueprint Image Placeholder */}
+              <div className="relative h-56 w-full overflow-hidden bg-slate-950 p-2">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="w-full h-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-500 opacity-80"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-80" />
 
-          {/* Flow 1: Web App -> Docker -> AWS */}
-          <div className="relative">
-            <h3 className="text-xl font-semibold text-white text-center mb-8">Modern Web App Deployment</h3>
-            <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8">
+                <span className="absolute top-4 left-4 px-3 py-1 rounded-full bg-slate-950/90 border border-accentCyan/30 text-[10px] font-mono font-bold uppercase tracking-wider text-accentCyan flex items-center gap-1.5">
+                  <FaNetworkWired /> {item.subtitle}
+                </span>
+              </div>
 
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                className="bg-cardBg p-6 rounded-2xl border border-slate-700 shadow-lg text-center w-48 relative z-10"
-              >
-                <FaReact className="text-6xl text-[#61DAFB] mx-auto mb-3" />
-                <h4 className="font-bold text-white">React / Node.js</h4>
-                <p className="text-xs text-slate-400 mt-1">Application Code</p>
-              </motion.div>
+              {/* Card Body */}
+              <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
+                <div>
+                  <h3 className="text-xl font-bold text-white group-hover:text-accentCyan transition-colors">
+                    {item.title}
+                  </h3>
+                  <p className="text-slate-400 text-xs sm:text-sm leading-relaxed mt-2 line-clamp-3">
+                    {item.description}
+                  </p>
+                </div>
 
-              {/* Arrow */}
-              <motion.div
-                initial={{ width: 0 }}
-                whileInView={{ width: "3rem" }}
-                viewport={{ once: true }}
-                className="hidden md:block h-1 bg-slate-600 relative my-4 w-12 shrink-0 transition-all duration-1000"
-              >
-                <div className="absolute right-0 top-1/2 -mt-1.5 border-t-6 border-b-6 border-l-8 border-transparent border-l-slate-600"></div>
-              </motion.div>
+                {/* Highlights */}
+                <div className="space-y-1.5 py-2 border-y border-slate-800/80">
+                  {item.highlights.map((highlight, hIdx) => (
+                    <div key={hIdx} className="flex items-center gap-2 text-xs text-slate-300">
+                      <FaCheckCircle className="text-accentCyan shrink-0 text-[10px]" />
+                      <span className="line-clamp-1">{highlight}</span>
+                    </div>
+                  ))}
+                </div>
 
-              <div className="md:hidden w-1 h-8 bg-slate-600 my-2"></div>
+                {/* Tech chips */}
+                <div className="flex flex-wrap gap-1.5">
+                  {item.technologies.map((tech, tIdx) => (
+                    <span
+                      key={tIdx}
+                      className="px-2.5 py-0.5 rounded-md bg-accentCyan/10 border border-accentCyan/20 text-accentCyan text-[11px] font-mono"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
 
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.2 }}
-                className="bg-cardBg p-6 rounded-2xl border border-primary shadow-lg shadow-primary/10 text-center w-48 relative z-10"
-              >
-                <FaDocker className="text-6xl text-[#2496ED] mx-auto mb-3" />
-                <h4 className="font-bold text-white">Containerization</h4>
-                <p className="text-xs text-slate-400 mt-1">Docker Image Build</p>
-              </motion.div>
-
-              {/* Arrow */}
-              <motion.div
-                initial={{ width: 0 }}
-                whileInView={{ width: "3rem" }}
-                viewport={{ once: true }}
-                className="hidden md:block h-1 bg-slate-600 relative my-4 w-12 shrink-0 transition-all duration-1000 delay-300"
-              >
-                <div className="absolute right-0 top-1/2 -mt-1.5 border-t-6 border-b-6 border-l-8 border-transparent border-l-slate-600"></div>
-              </motion.div>
-
-              <div className="md:hidden w-1 h-8 bg-slate-600 my-2"></div>
-
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.4 }}
-                className="bg-cardBg p-6 rounded-2xl border border-[#FF9900] shadow-lg shadow-[#FF9900]/10 text-center w-48 relative z-10"
-              >
-                <FaAws className="text-6xl text-[#FF9900] mx-auto mb-3" />
-                <h4 className="font-bold text-white">AWS EC2 Server</h4>
-                <p className="text-xs text-slate-400 mt-1">Production Run</p>
-              </motion.div>
-
-            </div>
-          </div>
-
-
-
-
+                {/* Expand Button */}
+                <button
+                  onClick={() => setSelectedArch(item)}
+                  className="w-full py-2.5 px-4 rounded-xl bg-slate-900 hover:bg-accentCyan/20 text-slate-200 hover:text-accentCyan border border-slate-800 hover:border-accentCyan/40 text-xs font-bold flex items-center justify-center gap-2 transition-all shadow-sm"
+                >
+                  <FaExpand className="text-xs" />
+                  <span>Expand Architectural Blueprint</span>
+                </button>
+              </div>
+            </GlassCard>
+          ))}
         </div>
       </div>
 
-
+      {/* Architecture Detail Modal */}
+      <ArchitectureModal
+        item={selectedArch}
+        onClose={() => setSelectedArch(null)}
+      />
     </section>
   );
 };

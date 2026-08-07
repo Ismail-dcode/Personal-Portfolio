@@ -1,18 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 80px; /* Offset for sticky navbar */
+  scroll-padding-top: 90px;
 }
 
 body {
   margin: 0;
-  display: flex;
   min-width: 320px;
   min-height: 100vh;
   overflow-x: hidden;
+  background-color: #05020a;
+  color: #e2e8f0;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #070312;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #261142;
+  border-radius: 5px;
+  border: 2px solid #070312;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b721ff;
 }
 
 #root {
@@ -20,7 +43,47 @@ body {
 }
 
 @layer utilities {
+  .glass-panel {
+    background: rgba(18, 9, 36, 0.65);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(183, 33, 255, 0.15);
+  }
+
+  .glass-panel-hover {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .glass-panel-hover:hover {
+    background: rgba(26, 12, 50, 0.8);
+    border-color: rgba(183, 33, 255, 0.4);
+    box-shadow: 0 10px 30px -10px rgba(183, 33, 255, 0.25);
+    transform: translateY(-4px);
+  }
+
   .text-glow {
-    text-shadow: 0 0 10px rgba(183, 33, 255, 0.5), 0 0 30px rgba(183, 33, 255, 0.3);
+    text-shadow: 0 0 15px rgba(183, 33, 255, 0.6), 0 0 35px rgba(183, 33, 255, 0.3);
+  }
+
+  .text-glow-cyan {
+    text-shadow: 0 0 15px rgba(0, 240, 255, 0.6), 0 0 35px rgba(0, 240, 255, 0.3);
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, #ffffff 0%, #d8b4fe 50%, #b721ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-gradient-cyan {
+    background: linear-gradient(135deg, #ffffff 0%, #a5f3fc 50%, #00f0ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .bg-radial-grid {
+    background-image: radial-gradient(rgba(183, 33, 255, 0.12) 1px, transparent 1px);
+    background-size: 32px 32px;
   }
 }
+

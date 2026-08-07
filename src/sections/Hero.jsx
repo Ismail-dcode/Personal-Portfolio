@@ -1,111 +1,186 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-scroll';
-import { FaGithub, FaLinkedin, FaDocker } from 'react-icons/fa';
-import { FaXTwitter } from 'react-icons/fa6';
+import { FaArrowDown, FaBriefcase, FaDownload, FaRocket, FaReact, FaNodeJs, FaAws, FaDocker, FaCode, FaTerminal } from 'react-icons/fa';
+import { portfolioData } from '../data/portfolioData';
+import GradientButton from '../components/GradientButton';
+
+const iconComponents = {
+  FaReact,
+  FaNodeJs,
+  FaAws,
+  FaDocker,
+  SiTypescript: FaCode,
+  SiGraphql: FaTerminal,
+};
+
 
 const Hero = () => {
+  const { hero } = portfolioData;
+
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
-      {/* Background elements */}
-      <div className="absolute inset-0 z-0">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[120px]" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-[120px]" />
-      </div>
+    <section
+      id="hero"
+      className="relative min-h-screen pt-28 pb-16 flex items-center justify-center overflow-hidden bg-radial-grid"
+    >
+      {/* Dynamic Animated Gradient Orbs */}
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/15 rounded-full blur-[140px] pointer-events-none animate-pulse-slow" />
+      <div className="absolute top-1/3 right-10 w-[400px] h-[400px] bg-accentCyan/10 rounded-full blur-[120px] pointer-events-none animate-float" />
+      <div className="absolute bottom-10 left-10 w-[350px] h-[350px] bg-purple-600/10 rounded-full blur-[100px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-        <div className="text-center max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="mb-4"
-          >
-            <span className="text-primary font-medium tracking-wider uppercase text-sm">Welcome! Nice to connect with you.</span>
-          </motion.div>
-
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-4xl sm:text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"
-          >
-            I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-[#21d4fd] text-glow">Shaikh Ismail</span>
-          </motion.h1>
-
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-xl sm:text-2xl md:text-3xl text-slate-300 mb-6 font-medium"
-          >
-            Cloud & DevOps Engineer <span className="text-slate-500">(Enthusiast)</span>
-          </motion.h2>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="text-base sm:text-lg text-slate-400 mb-10 max-w-2xl mx-auto"
-          >
-            "I help deploy, manage, and automate software applications. By working with Linux, Docker, and cloud platforms, I make sure deployments are fast, reliable, and scalable."
-            <br /><span className="text-sm mt-2 block text-primary/80">AWS | Docker | Linux </span>
-          </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12"
-          >
-            <Link
-              to="projects"
-              smooth={true}
-              duration={500}
-              offset={-70}
-              className="w-full sm:w-auto px-8 py-3 bg-primary hover:bg-[#820c82] text-white font-semibold rounded-lg transition-all transform hover:scale-105 cursor-pointer shadow-lg shadow-primary/30"
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          {/* Left Column Text Content */}
+          <div className="lg:col-span-7 text-center lg:text-left space-y-6">
+            {/* Status Pill */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-panel border border-primary/30 text-xs font-semibold text-primary-light shadow-glow-primary"
             >
-              View Projects
-            </Link>
-            <a
-              href="assets/CLOUD_Resume_1.pdf"
-              download
-              className="w-full sm:w-auto px-8 py-3 bg-cardBg border border-slate-700 hover:border-primary text-white font-medium rounded-lg transition-all cursor-pointer"
-            >
-              Download Resume
-            </a>
-            <Link
-              to="contact"
-              smooth={true}
-              duration={500}
-              offset={-70}
-              className="w-full sm:w-auto px-8 py-3 bg-transparent text-slate-300 hover:text-white font-medium rounded-lg transition-all cursor-pointer border border-transparent hover:border-slate-700"
-            >
-              Contact
-            </Link>
-          </motion.div>
+              <span className="w-2 h-2 rounded-full bg-accentEmerald animate-ping" />
+              <span>{hero.badge}</span>
+            </motion.div>
 
-          {/* Social Links */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.6 }}
-            className="flex items-center justify-center gap-6"
-          >
-            <a href="https://github.com/Ismail-dcode" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white hover:scale-110 transition-all text-2xl">
-              <FaGithub />
-            </a>
-            <a href="https://www.linkedin.com/in/ismail-shaikh-19798a335/" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-[#0A66C2] hover:scale-110 transition-all text-2xl">
-              <FaLinkedin />
-            </a>
-            <a href="https://hub.docker.com/u/ismaildcode" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-[#2496ED] hover:scale-110 transition-all text-2xl">
-              <FaDocker />
-            </a>
-            <a href="https://x.com/Ismail_dcode/" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white hover:scale-110 transition-all text-2xl">
-              <FaXTwitter />
-            </a>
-          </motion.div>
+            {/* Main Headline */}
+            <motion.h1
+              initial={{ opacity: 0, y: 25 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.1]"
+            >
+              {hero.titlePrefix}{' '}
+              <span className="text-gradient hover:text-glow transition-all duration-300">
+                {hero.titleHighlight}
+              </span>{' '}
+              {hero.titleSuffix}
+            </motion.h1>
+
+            {/* Subtitle */}
+            <motion.p
+              initial={{ opacity: 0, y: 25 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed"
+            >
+              {hero.subtitle}
+            </motion.p>
+
+            {/* Three CTA Buttons */}
+            <motion.div
+              initial={{ opacity: 0, y: 25 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2"
+            >
+              <GradientButton
+                href={hero.cta.primary.href}
+                variant="primary"
+                size="lg"
+                icon={FaRocket}
+              >
+                {hero.cta.primary.text}
+              </GradientButton>
+
+              <GradientButton
+                href={hero.cta.secondary.href}
+                variant="secondary"
+                size="lg"
+                icon={FaBriefcase}
+              >
+                {hero.cta.secondary.text}
+              </GradientButton>
+
+              <GradientButton
+                href={hero.cta.tertiary.href}
+                variant="outline"
+                size="lg"
+                icon={FaDownload}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {hero.cta.tertiary.text}
+              </GradientButton>
+            </motion.div>
+          </div>
+
+          {/* Right Column Profile Showcase + Floating Badges */}
+          <div className="lg:col-span-5 relative flex justify-center items-center">
+            {/* Glowing Backdrop Ring */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8 }}
+              className="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96"
+            >
+              <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-primary via-purple-600 to-accentCyan p-1 animate-spin-slow opacity-80 shadow-glow-primary" />
+
+              {/* Glass Inner Frame */}
+              <div className="absolute inset-2 rounded-full glass-panel overflow-hidden flex items-center justify-center bg-slate-950/90 border border-primary/30">
+                {/* Profile Image Placeholder */}
+                <div className="w-full h-full relative group">
+                  <img
+                    src={hero.image || "/assets/profile.jpeg"}
+                    alt="Shaikh Ismail"
+                    className="w-full h-full object-cover transition-all duration-500 scale-105 group-hover:scale-100"
+                    onError={(e) => {
+                      e.target.src = '/assets/Profile-pic.jpeg';
+                    }}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent pointer-events-none" />
+                </div>
+              </div>
+
+              {/* Floating Technology Badges */}
+              {hero.floatingBadges.map((badge, idx) => {
+                const IconComponent = iconComponents[badge.icon] || FaReact;
+                // Position calculations around avatar for mobile and desktop
+                const positions = [
+                  '-top-4 -left-2 sm:-top-6 sm:-left-6',
+                  'top-2 -right-4 sm:top-4 sm:-right-8',
+                  '-bottom-4 -left-2 sm:-bottom-6 sm:-left-4',
+                  '-bottom-2 -right-4 sm:-bottom-4 sm:-right-8',
+                  'top-[65%] -left-6 sm:top-[65%] sm:-left-16',
+                  '-top-5 right-6 sm:-top-8 sm:right-12'
+                ];
+                const posClass = positions[idx % positions.length];
+
+                return (
+                  <motion.div
+                    key={badge.name}
+                    initial={{ opacity: 0, scale: 0.5 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.5, delay: 0.4 + idx * 0.1 }}
+                    className={`absolute ${posClass} glass-panel p-1.5 sm:p-2.5 rounded-xl sm:rounded-2xl flex items-center gap-1.5 sm:gap-2 border border-white/15 shadow-xl hover:scale-110 transition-transform cursor-pointer backdrop-blur-md z-20`}
+                  >
+                    <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-lg sm:rounded-xl bg-slate-900 flex items-center justify-center text-primary text-xs sm:text-base shadow-inner shrink-0">
+                      <IconComponent />
+                    </div>
+                    <span className="text-[10px] sm:text-xs font-semibold text-slate-200 pr-0.5 sm:pr-1 whitespace-nowrap">
+                      {badge.name}
+                    </span>
+                  </motion.div>
+                );
+              })}
+            </motion.div>
+          </div>
         </div>
+
+        {/* Scroll Indicator */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1 }}
+          className="mt-16 text-center"
+        >
+          <a
+            href="#trust"
+            className="inline-flex flex-col items-center gap-2 text-slate-400 hover:text-primary transition-colors text-xs font-mono"
+          >
+            <span>SCROLL DOWN</span>
+            <FaArrowDown className="animate-bounce text-sm text-primary" />
+          </a>
+        </motion.div>
       </div>
     </section>
   );

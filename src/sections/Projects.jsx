@@ -1,121 +1,115 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import SectionHeading from '../components/SectionHeading';
-import { FaGithub, FaExternalLinkAlt, FaDocker, FaAws } from 'react-icons/fa';
-import { SiGithubactions } from 'react-icons/si';
-
-const projectsData = [
-  {
-    title: "Dockerized Node.js Application",
-    description: "Containerized a scalable Node.js application to ensure consistent environments across development and production.",
-    problemSolution: "Problem: 'It works on my machine' issues and difficult setup. Solution: Dockerized the app for instant spin-up, improving onboarding time by 80%.",
-    architecture: "Node.js App → Docker Image (Multi-stage build) → Docker Hub → Server Deploy",
-    techStack: ["Docker", "Node.js", "Express", "Linux"],
-    githubURL: "https://github.com/Ismail-dcode/Node-app-Local-Hosting",
-    liveURL: "https://hub.docker.com/r/ismaildcode/my-personal-portfolio",
-    icon: <FaDocker className="text-4xl text-[#2496ED] mb-4" />
-  },
-  {
-    title: "AWS S3 + CloudFront Static Deployment",
-    description: "Deployed a static web application on AWS S3, edge-optimized worldwide using CloudFront.",
-    problemSolution: "Problem: High latency for global users on traditional servers. Solution: Leveraged AWS CDN (CloudFront) caching with S3 origin for sub-50ms load times globally.",
-    architecture: "GitHub → S3 Bucket (Static Hosting) → CloudFront Edge Locations → User",
-    techStack: ["AWS S3", "AWS CloudFront", "HTML/CSS", "IAM Policies"],
-    githubURL: "https://github.com/Ismail-dcode/AWS-S3-CloudFront-Project",
-    liveURL: "https://d2bhhd6ys9k0o4.cloudfront.net/",
-    icon: <FaAws className="text-4xl text-[#FF9900] mb-4" />
-  },
-  {
-    title: "CodeByte AI Hackathon Prototype",
-    description: "AI-powered tool that converts UI images into responsive HTML/CSS code.",
-    problemSolution: "Problem: Slow UI prototyping. Solution: Used Google Gemini AI integration to scan uploaded designs and instantly return usable code.",
-    architecture: "React Frontend → Node.js Backend API → Gemini AI Model → Response formatting",
-    techStack: ["React", "Node.js", "Google AI API", "Vite"],
-    githubURL: "https://github.com/Ismail-dcode/CodeByte",
-    liveURL: "https://hub.docker.com/r/ismaildcode/codebyte-v1",
-    icon: <span className="text-4xl mb-4 inline-block">🤖</span>
-  }
-];
+import { FaExternalLinkAlt, FaGithub, FaInfoCircle } from 'react-icons/fa';
+import { portfolioData } from '../data/portfolioData';
+import SectionTitle from '../components/SectionTitle';
+import GlassCard from '../components/GlassCard';
+import ProjectModal from '../components/ProjectModal';
 
 const Projects = () => {
+  const [activeProject, setActiveProject] = useState(null);
+
   return (
-    <section id="projects" className="py-20 bg-darkBg relative border-t border-slate-800/50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionHeading
-          title="Featured Projects"
-          subtitle="Real-world examples of my work, focusing on DevOps, Cloud and Fullstack Development."
+    <section id="projects" className="py-14 relative overflow-hidden bg-radial-grid">
+      {/* Glow accent */}
+      <div className="absolute top-1/3 right-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[150px] pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <SectionTitle
+          badge="Featured Engineering Works"
+          title="Crafted Solutions &"
+          highlight="Featured Projects"
+          subtitle="Explore selected full-stack applications, microservice platforms, and developer tooling built for performance, security, and scalability."
         />
 
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
-          {projectsData.map((project, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group bg-cardBg rounded-xl p-6 sm:p-8 border border-slate-800 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 relative overflow-hidden flex flex-col h-full"
+        {/* 6 Project Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {portfolioData.projects.map((project, idx) => (
+            <GlassCard
+              key={project.id}
+              delay={idx * 0.1}
+              className="flex flex-col justify-between p-0 overflow-hidden group border border-white/10"
             >
-              {/* Highlight gradient on hover */}
-              <div className="absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r from-primary to-[#21d4fd] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+              {/* Image & Overlay */}
+              <div className="relative h-52 w-full overflow-hidden bg-slate-950">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-80 group-hover:opacity-100"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent" />
 
-              {project.icon}
-
-              <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-primary transition-colors">
-                {project.title}
-              </h3>
-
-              <p className="text-slate-400 mb-4 h-auto md:h-12">
-                {project.description}
-              </p>
-
-              <div className="bg-darkBg/50 p-4 rounded-lg border border-slate-700/50 mb-4">
-                <p className="text-sm text-slate-300"><strong className="text-white">Case:</strong> {project.problemSolution}</p>
+                <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-slate-950/80 border border-primary/30 text-[10px] font-mono font-bold uppercase tracking-wider text-accentCyan">
+                  {project.category}
+                </span>
               </div>
 
-              <div className="mb-6">
-                <h4 className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">Architecture Flow</h4>
-                <p className="text-sm font-mono text-primary/90 bg-primary/10 p-2 rounded border border-primary/20">
-                  {project.architecture}
-                </p>
-              </div>
+              {/* Card Content */}
+              <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
+                <div>
+                  <h3 className="text-xl font-bold text-white group-hover:text-primary-light transition-colors line-clamp-1">
+                    {project.title}
+                  </h3>
+                  <p className="text-slate-400 text-xs sm:text-sm leading-relaxed mt-2 line-clamp-3">
+                    {project.description}
+                  </p>
+                </div>
 
-              <div className="flex flex-wrap gap-2 mb-6">
-                {project.techStack.map((tech, tIdx) => (
-                  <span key={tIdx} className="px-3 py-1 bg-slate-800 text-xs font-medium text-slate-300 rounded-full border border-slate-700">
-                    {tech}
-                  </span>
-                ))}
-              </div>
+                {/* Tech Badges */}
+                <div className="flex flex-wrap gap-1.5 pt-2">
+                  {project.tags.slice(0, 4).map((tag, tIdx) => (
+                    <span
+                      key={tIdx}
+                      className="px-2.5 py-0.5 rounded-md bg-primary/10 border border-primary/20 text-primary-light text-[11px] font-mono font-semibold"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                  {project.tags.length > 4 && (
+                    <span className="px-2 py-0.5 rounded-md bg-slate-800 text-slate-400 text-[10px]">
+                      +{project.tags.length - 4}
+                    </span>
+                  )}
+                </div>
 
-              <div className="mt-auto pt-4 flex gap-4 justify-end relative z-10 w-full border-t border-slate-800/50">
-                {project.githubURL && (
+                {/* Action Buttons */}
+                <div className="flex flex-wrap items-center gap-2 pt-4 border-t border-slate-800/80">
+                  {project.liveUrl && project.liveUrl !== project.githubUrl && (
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 min-w-[90px] py-2 px-2.5 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-bold text-xs flex items-center justify-center gap-1.5 shadow-md hover:opacity-90 transition-all"
+                    >
+                      <FaExternalLinkAlt className="text-[10px]" /> Live Demo
+                    </a>
+                  )}
                   <a
-                    href={project.githubURL}
+                    href={project.githubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-slate-400 hover:text-white transition-colors"
-                    aria-label="GitHub Repository"
+                    className="flex-1 min-w-[90px] py-2 px-2.5 rounded-xl bg-gradient-to-r from-primary to-purple-600 text-white font-bold text-xs flex items-center justify-center gap-1.5 shadow-glow-primary hover:opacity-90 transition-all"
                   >
-                    <FaGithub size={22} />
+                    <FaGithub className="text-sm" /> GitHub
                   </a>
-                )}
-                {project.liveURL && (
-                  <a
-                    href={project.liveURL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-slate-400 hover:text-primary transition-colors"
-                    aria-label="Live Demo"
+                  <button
+                    onClick={() => setActiveProject(project)}
+                    className="py-2 px-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 text-xs font-semibold flex items-center justify-center gap-1 transition-all"
                   >
-                    <FaExternalLinkAlt size={20} />
-                  </a>
-                )}
+                    <FaInfoCircle className="text-[11px]" /> Details
+                  </button>
+                </div>
               </div>
-            </motion.div>
+            </GlassCard>
           ))}
         </div>
       </div>
+
+      {/* Project Details Modal */}
+      <ProjectModal
+        project={activeProject}
+        onClose={() => setActiveProject(null)}
+      />
     </section>
   );
 };

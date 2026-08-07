@@ -59,7 +59,7 @@ const WhatIDo = () => {
   return (
     <section
       id="whatido"
-      className="py-20 bg-darkBg relative border-t border-slate-800/50"
+      className="py-14 bg-darkBg relative border-t border-slate-800/50"
     >
       {/* Subtle radial glow */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -72,7 +72,7 @@ const WhatIDo = () => {
           subtitle="Helping applications run efficiently through modern infrastructure and automation."
         />
 
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((item, i) => (
             <motion.div
               key={i}
