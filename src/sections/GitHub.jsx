@@ -71,7 +71,7 @@ const GitHub = () => {
                   Contribution Activity Matrix
                 </h3>
                 <span className="text-xs font-mono text-slate-400">
-                  {github.username} • 240+ Contributions in the last year
+                  {github.username} • 500+ Contributions in the last year
                 </span>
               </div>
             </div>
