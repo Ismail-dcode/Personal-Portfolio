@@ -18,7 +18,7 @@ export const portfolioData = {
 
   // Hero Section Data
   hero: {
-    image: "/assets/profile.jpeg",
+    image: "/assets/Profile-0.png",
     badge: "Available for Remote Work & Internships",
     titlePrefix: "Building & Automating",
     titleHighlight: "Cloud Architecture",
@@ -33,7 +33,7 @@ export const portfolioData = {
       { name: "AWS Cloud", icon: "FaAws", color: "from-amber-500 to-orange-500" },
       { name: "Linux Administration", icon: "FaLinux", color: "from-yellow-500 to-amber-600" },
       { name: "Docker Containers", icon: "FaDocker", color: "from-blue-600 to-cyan-500" },
-      { name: "GitHub Actions", icon: "FaGithub", color: "from-purple-500 to-indigo-500" },
+      { name: "GitHub Actions", icon: "FaGithub", color: "from-emerald-500 to-green-500" },
       { name: "React & JavaScript", icon: "FaReact", color: "from-cyan-500 to-blue-500" },
       { name: "C / C++ & SQL", icon: "FaCode", color: "from-emerald-500 to-teal-500" },
     ]

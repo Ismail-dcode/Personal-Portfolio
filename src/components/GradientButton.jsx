@@ -19,13 +19,13 @@ const GradientButton = ({
 
   const variantClasses = {
     primary:
-      'bg-gradient-to-r from-primary via-purple-600 to-indigo-600 text-white shadow-glow-primary hover:shadow-primary/50 border border-primary/40',
+      'bg-gradient-to-r from-emerald-500 via-green-500 to-teal-500 text-slate-950 font-extrabold shadow-glow-primary hover:from-emerald-400 hover:to-green-400 border border-emerald-400/40',
     secondary:
-      'bg-gradient-to-r from-cyan-500 via-teal-500 to-emerald-500 text-slate-950 font-bold shadow-glow-cyan hover:shadow-cyan/50 border border-cyan-400/40',
+      'bg-emerald-950/80 hover:bg-emerald-900 text-emerald-300 font-bold border border-emerald-500/40 shadow-sm',
     outline:
-      'bg-slate-900/60 text-slate-200 border border-slate-700/80 hover:border-primary/60 hover:text-white hover:bg-primary/10',
+      'bg-slate-900/80 text-emerald-300 border border-emerald-500/30 hover:border-emerald-400 hover:text-white hover:bg-emerald-500/10',
     glass:
-      'glass-panel text-white hover:bg-primary/20 hover:border-primary/50 border border-white/10',
+      'glass-panel text-white hover:bg-emerald-500/20 hover:border-emerald-500/50 border border-emerald-500/20',
   };
 
   const content = (

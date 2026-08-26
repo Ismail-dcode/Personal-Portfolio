@@ -46,9 +46,9 @@ const Trust = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: idx * 0.05 }}
                 whileHover={{ y: -4, scale: 1.02 }}
-                className="glass-panel p-4 rounded-xl flex flex-col items-center justify-center text-center border border-white/10 hover:border-primary/40 hover:bg-slate-900/80 transition-all group"
+                className="glass-panel p-4 rounded-xl flex flex-col items-center justify-center text-center border border-slate-800 hover:border-emerald-500/40 hover:bg-slate-900/80 transition-all group"
               >
-                <div className="w-10 h-10 rounded-xl bg-slate-900 flex items-center justify-center text-primary group-hover:text-accentCyan group-hover:scale-110 transition-all mb-2.5 shadow-inner">
+                <div className="w-10 h-10 rounded-xl bg-slate-900 flex items-center justify-center text-emerald-400 group-hover:text-green-300 group-hover:scale-110 transition-all mb-2.5 shadow-inner">
                   <IconComponent className="text-lg" />
                 </div>
                 <h4 className="text-xs font-bold text-slate-200 group-hover:text-white transition-colors">

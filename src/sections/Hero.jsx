@@ -23,9 +23,9 @@ const Hero = () => {
       className="relative min-h-screen pt-28 pb-16 flex items-center justify-center overflow-hidden bg-radial-grid"
     >
       {/* Dynamic Animated Gradient Orbs */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/15 rounded-full blur-[140px] pointer-events-none animate-pulse-slow" />
-      <div className="absolute top-1/3 right-10 w-[400px] h-[400px] bg-accentCyan/10 rounded-full blur-[120px] pointer-events-none animate-float" />
-      <div className="absolute bottom-10 left-10 w-[350px] h-[350px] bg-purple-600/10 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-emerald-500/10 rounded-full blur-[140px] pointer-events-none animate-pulse-slow" />
+      <div className="absolute top-1/3 right-10 w-[400px] h-[400px] bg-green-400/5 rounded-full blur-[120px] pointer-events-none animate-float" />
+      <div className="absolute bottom-10 left-10 w-[350px] h-[350px] bg-teal-500/5 rounded-full blur-[100px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -36,9 +36,9 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-panel border border-primary/30 text-xs font-semibold text-primary-light shadow-glow-primary"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-panel border border-emerald-500/30 text-xs font-semibold text-emerald-300 shadow-glow-primary"
             >
-              <span className="w-2 h-2 rounded-full bg-accentEmerald animate-ping" />
+              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
               <span>{hero.badge}</span>
             </motion.div>
 
@@ -113,18 +113,18 @@ const Hero = () => {
               transition={{ duration: 0.8 }}
               className="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96"
             >
-              <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-primary via-purple-600 to-accentCyan p-1 animate-spin-slow opacity-80 shadow-glow-primary" />
+              <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-emerald-400 via-green-500 to-teal-400 p-1 animate-spin-slow opacity-80 shadow-glow-primary" />
 
               {/* Glass Inner Frame */}
-              <div className="absolute inset-2 rounded-full glass-panel overflow-hidden flex items-center justify-center bg-slate-950/90 border border-primary/30">
+              <div className="absolute inset-2 rounded-full glass-panel overflow-hidden flex items-center justify-center bg-slate-950/90 border border-emerald-500/30">
                 {/* Profile Image Placeholder */}
                 <div className="w-full h-full relative group">
                   <img
-                    src={hero.image || "/assets/profile.jpeg"}
+                    src={hero.image || "/assets/Profile-0.png"}
                     alt="Shaikh Ismail"
                     className="w-full h-full object-cover transition-all duration-500 scale-105 group-hover:scale-100"
                     onError={(e) => {
-                      e.target.src = '/assets/Profile-pic.jpeg';
+                      e.target.src = '/assets/Profile-0.png';
                     }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent pointer-events-none" />
@@ -151,9 +151,9 @@ const Hero = () => {
                     initial={{ opacity: 0, scale: 0.5 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.5, delay: 0.4 + idx * 0.1 }}
-                    className={`absolute ${posClass} glass-panel p-1.5 sm:p-2.5 rounded-xl sm:rounded-2xl flex items-center gap-1.5 sm:gap-2 border border-white/15 shadow-xl hover:scale-110 transition-transform cursor-pointer backdrop-blur-md z-20`}
+                    className={`absolute ${posClass} glass-panel p-1.5 sm:p-2.5 rounded-xl sm:rounded-2xl flex items-center gap-1.5 sm:gap-2 border border-emerald-500/30 shadow-xl hover:scale-110 transition-transform cursor-pointer backdrop-blur-md z-20`}
                   >
-                    <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-lg sm:rounded-xl bg-slate-900 flex items-center justify-center text-primary text-xs sm:text-base shadow-inner shrink-0">
+                    <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-lg sm:rounded-xl bg-slate-900 flex items-center justify-center text-emerald-400 text-xs sm:text-base shadow-inner shrink-0">
                       <IconComponent />
                     </div>
                     <span className="text-[10px] sm:text-xs font-semibold text-slate-200 pr-0.5 sm:pr-1 whitespace-nowrap">
@@ -175,10 +175,10 @@ const Hero = () => {
         >
           <a
             href="#trust"
-            className="inline-flex flex-col items-center gap-2 text-slate-400 hover:text-primary transition-colors text-xs font-mono"
+            className="inline-flex flex-col items-center gap-2 text-slate-400 hover:text-emerald-400 transition-colors text-xs font-mono"
           >
             <span>SCROLL DOWN</span>
-            <FaArrowDown className="animate-bounce text-sm text-primary" />
+            <FaArrowDown className="animate-bounce text-sm text-emerald-400" />
           </a>
         </motion.div>
       </div>

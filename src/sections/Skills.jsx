@@ -61,16 +61,16 @@ const skillIcons = {
 };
 
 const levelColors = {
-  Expert: 'bg-primary/20 text-primary-light border-primary/30',
-  Advanced: 'bg-accentCyan/20 text-accentCyan border-accentCyan/30',
-  Intermediate: 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30',
+  Expert: 'bg-emerald-500/20 text-emerald-300 border-emerald-500/40 shadow-glow-primary',
+  Advanced: 'bg-green-500/20 text-green-300 border-green-500/30',
+  Intermediate: 'bg-teal-500/20 text-teal-300 border-teal-500/30',
 };
 
 const Skills = () => {
   return (
     <section id="skills" className="py-14 relative overflow-hidden bg-radial-grid">
       {/* Background glow */}
-      <div className="absolute top-1/2 right-1/4 w-[400px] h-[400px] bg-primary/10 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute top-1/2 right-1/4 w-[400px] h-[400px] bg-emerald-500/10 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionTitle
@@ -94,7 +94,7 @@ const Skills = () => {
                 <div>
                   <div className="flex items-center justify-between mb-4 pb-3 border-b border-slate-800">
                     <h3 className="text-sm sm:text-base font-bold text-white flex items-center gap-2">
-                      <div className="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center text-primary border border-primary/30 shrink-0">
+                      <div className="w-8 h-8 rounded-lg bg-emerald-500/20 flex items-center justify-center text-emerald-400 border border-emerald-500/30 shrink-0">
                         <CategoryIcon className="text-sm" />
                       </div>
                       <span className="leading-tight">{categoryGroup.category}</span>

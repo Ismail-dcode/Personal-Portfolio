@@ -12,7 +12,7 @@ const Projects = () => {
   return (
     <section id="projects" className="py-14 relative overflow-hidden bg-radial-grid">
       {/* Glow accent */}
-      <div className="absolute top-1/3 right-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[150px] pointer-events-none" />
+      <div className="absolute top-1/3 right-0 w-[500px] h-[500px] bg-emerald-500/10 rounded-full blur-[150px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionTitle
@@ -39,7 +39,7 @@ const Projects = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent" />
 
-                <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-slate-950/80 border border-primary/30 text-[10px] font-mono font-bold uppercase tracking-wider text-accentCyan">
+                <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-slate-950/80 border border-emerald-500/30 text-[10px] font-mono font-bold uppercase tracking-wider text-emerald-400">
                   {project.category}
                 </span>
               </div>
@@ -47,7 +47,7 @@ const Projects = () => {
               {/* Card Content */}
               <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
                 <div>
-                  <h3 className="text-xl font-bold text-white group-hover:text-primary-light transition-colors line-clamp-1">
+                  <h3 className="text-xl font-bold text-white group-hover:text-emerald-300 transition-colors line-clamp-1">
                     {project.title}
                   </h3>
                   <p className="text-slate-400 text-xs sm:text-sm leading-relaxed mt-2 line-clamp-3">
@@ -60,7 +60,7 @@ const Projects = () => {
                   {project.tags.slice(0, 4).map((tag, tIdx) => (
                     <span
                       key={tIdx}
-                      className="px-2.5 py-0.5 rounded-md bg-primary/10 border border-primary/20 text-primary-light text-[11px] font-mono font-semibold"
+                      className="px-2.5 py-0.5 rounded-md bg-emerald-500/10 border border-emerald-500/20 text-emerald-300 text-[11px] font-mono font-semibold"
                     >
                       {tag}
                     </span>
@@ -79,7 +79,7 @@ const Projects = () => {
                       href={project.liveUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex-1 min-w-[90px] py-2 px-2.5 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-bold text-xs flex items-center justify-center gap-1.5 shadow-md hover:opacity-90 transition-all"
+                      className="flex-1 min-w-[90px] py-2 px-2.5 rounded-xl bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-400 hover:to-green-500 text-slate-950 font-extrabold shadow-glow-primary text-xs flex items-center justify-center gap-1.5 transition-all"
                     >
                       <FaExternalLinkAlt className="text-[10px]" /> Live Demo
                     </a>
@@ -88,7 +88,7 @@ const Projects = () => {
                     href={project.githubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 min-w-[90px] py-2 px-2.5 rounded-xl bg-gradient-to-r from-primary to-purple-600 text-white font-bold text-xs flex items-center justify-center gap-1.5 shadow-glow-primary hover:opacity-90 transition-all"
+                    className="flex-1 min-w-[90px] py-2 px-2.5 rounded-xl bg-emerald-950/80 hover:bg-emerald-900 text-emerald-300 font-bold border border-emerald-500/40 text-xs flex items-center justify-center gap-1.5 shadow-sm transition-all"
                   >
                     <FaGithub className="text-sm" /> GitHub
                   </a>

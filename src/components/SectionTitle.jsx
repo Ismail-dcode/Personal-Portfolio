@@ -12,9 +12,9 @@ const SectionTitle = ({ badge, title, highlight, subtitle, align = "center" }) =
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-primary/10 border border-primary/25 text-primary text-xs font-semibold uppercase tracking-wider mb-4 shadow-glow-primary"
+          className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-bold uppercase tracking-wider mb-4 shadow-glow-primary"
         >
-          <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
+          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
           {badge}
         </motion.div>
       )}

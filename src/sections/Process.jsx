@@ -9,7 +9,7 @@ const Process = () => {
   return (
     <section id="process" className="py-14 relative overflow-hidden bg-slate-950/70 border-y border-slate-800/80">
       {/* Background glow */}
-      <div className="absolute top-1/3 left-1/3 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[150px] pointer-events-none" />
+      <div className="absolute top-1/3 left-1/3 w-[500px] h-[500px] bg-emerald-500/10 rounded-full blur-[150px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionTitle
@@ -33,18 +33,18 @@ const Process = () => {
                 <div>
                   {/* Step Header */}
                   <div className="flex items-center justify-between mb-4">
-                    <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-primary via-purple-600 to-accentCyan flex items-center justify-center text-white font-mono font-black text-lg shadow-glow-primary group-hover:scale-110 transition-transform">
+                    <span className="w-12 h-12 rounded-2xl bg-gradient-to-r from-emerald-500 to-green-600 flex items-center justify-center text-slate-950 font-mono font-black text-lg shadow-glow-primary group-hover:scale-105 transition-all">
                       {step.step}
                     </span>
                     {!isLast && (
-                      <span className="hidden lg:block text-slate-600 group-hover:text-primary group-hover:translate-x-1 transition-all">
+                      <span className="hidden lg:block text-slate-600 group-hover:text-emerald-400 group-hover:translate-x-1 transition-all">
                         <FaArrowRight className="text-lg" />
                       </span>
                     )}
                   </div>
 
                   {/* Title & Description */}
-                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-primary-light transition-colors">
+                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-emerald-300 transition-colors">
                     {step.title}
                   </h3>
 
@@ -54,7 +54,7 @@ const Process = () => {
                 </div>
 
                 {/* Bottom Step Status Indicator */}
-                <div className="pt-4 border-t border-slate-800/80 flex items-center gap-2 text-xs font-mono text-accentCyan">
+                <div className="pt-4 border-t border-slate-800/80 flex items-center gap-2 text-xs font-mono text-emerald-400">
                   <FaCheckCircle className="text-xs" />
                   <span>Phase {step.step} Milestone</span>
                 </div>

@@ -5,44 +5,44 @@ import { FiUploadCloud, FiServer, FiSettings, FiBox, FiActivity } from 'react-ic
 
 const services = [
   {
-    icon: <FiUploadCloud className="text-4xl text-primary" />,
+    icon: <FiUploadCloud className="text-4xl text-emerald-400" />,
     title: 'Application Deployment',
     description:
       'I help applications move from development environments into live production systems.',
-    accent: 'from-primary/20 to-primary/5',
-    border: 'hover:border-primary/50',
+    accent: 'from-emerald-500/30 to-emerald-500/5',
+    border: 'hover:border-emerald-500/60',
   },
   {
-    icon: <FiServer className="text-4xl text-fuchsia-400" />,
+    icon: <FiServer className="text-4xl text-green-400" />,
     title: 'Infrastructure Management',
     description:
       'I manage Linux-based environments and cloud servers to keep applications running smoothly.',
-    accent: 'from-fuchsia-500/20 to-fuchsia-500/5',
-    border: 'hover:border-fuchsia-500/50',
+    accent: 'from-green-500/30 to-green-500/5',
+    border: 'hover:border-green-500/60',
   },
   {
-    icon: <FiSettings className="text-4xl text-cyan-400" />,
+    icon: <FiSettings className="text-4xl text-teal-400" />,
     title: 'Automation',
     description:
       'I build automated workflows that reduce manual deployment work.',
-    accent: 'from-cyan-400/20 to-cyan-400/5',
-    border: 'hover:border-cyan-400/50',
+    accent: 'from-teal-500/30 to-teal-500/5',
+    border: 'hover:border-teal-500/60',
   },
   {
-    icon: <FiBox className="text-4xl text-sky-400" />,
+    icon: <FiBox className="text-4xl text-lime-400" />,
     title: 'Containerization',
     description:
       'I package applications into portable environments using Docker.',
-    accent: 'from-sky-400/20 to-sky-400/5',
-    border: 'hover:border-sky-400/50',
+    accent: 'from-lime-500/30 to-lime-500/5',
+    border: 'hover:border-lime-500/60',
   },
   {
-    icon: <FiActivity className="text-4xl text-emerald-400" />,
+    icon: <FiActivity className="text-4xl text-emerald-300" />,
     title: 'Monitoring',
     description:
       'I monitor application and server performance to improve reliability.',
-    accent: 'from-emerald-400/20 to-emerald-400/5',
-    border: 'hover:border-emerald-400/50',
+    accent: 'from-emerald-400/30 to-emerald-400/5',
+    border: 'hover:border-emerald-400/60',
   },
 ];
 
@@ -63,7 +63,7 @@ const WhatIDo = () => {
     >
       {/* Subtle radial glow */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-primary/5 rounded-full blur-[120px]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-emerald-500/10 rounded-full blur-[120px]" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -81,7 +81,7 @@ const WhatIDo = () => {
               whileInView="visible"
               viewport={{ once: true, margin: '-60px' }}
               variants={cardVariants}
-              className={`group relative bg-cardBg rounded-2xl p-6 border border-slate-800 ${item.border} transition-all duration-300 shadow-lg hover:shadow-primary/10 hover:-translate-y-1 overflow-hidden`}
+              className={`group relative bg-cardBg rounded-2xl p-6 border border-slate-800 ${item.border} transition-all duration-300 shadow-lg hover:shadow-emerald-500/20 hover:-translate-y-1 overflow-hidden`}
             >
               {/* gradient blob behind icon */}
               <div
@@ -89,11 +89,11 @@ const WhatIDo = () => {
               />
 
               {/* Icon box */}
-              <div className="relative w-14 h-14 flex items-center justify-center rounded-xl bg-darkBg border border-slate-700 mb-5 group-hover:scale-110 transition-transform duration-300">
+              <div className="relative w-14 h-14 flex items-center justify-center rounded-xl bg-darkBg border border-emerald-500/30 mb-5 group-hover:scale-110 transition-transform duration-300">
                 {item.icon}
               </div>
 
-              <h3 className="relative text-lg font-semibold text-white mb-2 group-hover:text-primary transition-colors duration-300">
+              <h3 className="relative text-lg font-semibold text-white mb-2 group-hover:text-emerald-300 transition-colors duration-300">
                 {item.title}
               </h3>
 
@@ -102,7 +102,7 @@ const WhatIDo = () => {
               </p>
 
               {/* Bottom accent line */}
-              <span className="absolute bottom-0 left-0 h-[2px] w-0 group-hover:w-full bg-gradient-to-r from-primary to-fuchsia-500 transition-all duration-500 rounded-full" />
+              <span className="absolute bottom-0 left-0 h-[2px] w-0 group-hover:w-full bg-gradient-to-r from-emerald-400 to-green-500 transition-all duration-500 rounded-full" />
             </motion.div>
           ))}
         </div>

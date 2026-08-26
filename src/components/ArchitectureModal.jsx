@@ -21,12 +21,12 @@ const ArchitectureModal = ({ item, onClose }) => {
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.9, y: 20 }}
           transition={{ type: 'spring', damping: 25, stiffness: 300 }}
-          className="relative w-full max-w-4xl glass-panel bg-slate-900/95 rounded-2xl border border-accentCyan/30 shadow-2xl overflow-hidden z-10 my-8"
+          className="relative w-full max-w-4xl glass-panel bg-slate-900/95 rounded-2xl border border-emerald-500/30 shadow-2xl overflow-hidden z-10 my-8"
         >
           {/* Header */}
           <div className="p-6 sm:p-8 border-b border-slate-800 flex items-start justify-between">
             <div>
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-accentCyan/10 border border-accentCyan/30 text-accentCyan text-xs font-bold uppercase tracking-wider mb-2">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-bold uppercase tracking-wider mb-2">
                 <FaNetworkWired /> {item.subtitle}
               </span>
               <h3 className="text-2xl sm:text-3xl font-extrabold text-white">
@@ -64,7 +64,7 @@ const ArchitectureModal = ({ item, onClose }) => {
             {/* Highlights */}
             {item.highlights && (
               <div>
-                <h4 className="text-sm font-bold uppercase tracking-wider text-accentCyan mb-3">
+                <h4 className="text-sm font-bold uppercase tracking-wider text-emerald-400 mb-3">
                   Architectural Benefits & Specs
                 </h4>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
@@ -73,7 +73,7 @@ const ArchitectureModal = ({ item, onClose }) => {
                       key={idx}
                       className="p-3.5 rounded-xl bg-slate-950/70 border border-slate-800 text-xs font-medium text-slate-200 flex items-start gap-2.5"
                     >
-                      <FaCheckCircle className="text-accentCyan shrink-0 mt-0.5" />
+                      <FaCheckCircle className="text-emerald-400 shrink-0 mt-0.5" />
                       <span>{highlight}</span>
                     </div>
                   ))}
@@ -90,7 +90,7 @@ const ArchitectureModal = ({ item, onClose }) => {
                 {item.technologies.map((tech, idx) => (
                   <span
                     key={idx}
-                    className="px-3 py-1 text-xs font-mono font-medium rounded-lg bg-accentCyan/10 border border-accentCyan/20 text-accentCyan"
+                    className="px-3 py-1 text-xs font-mono font-medium rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-300"
                   >
                     {tech}
                   </span>

@@ -15,7 +15,7 @@ const FAQ = () => {
   return (
     <section id="faq" className="py-14 relative overflow-hidden bg-radial-grid">
       {/* Glow accent */}
-      <div className="absolute top-1/3 right-10 w-[400px] h-[400px] bg-primary/10 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute top-1/3 right-10 w-[400px] h-[400px] bg-emerald-500/10 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionTitle
@@ -38,16 +38,16 @@ const FAQ = () => {
               >
                 <button
                   onClick={() => toggleAccordion(idx)}
-                  className="w-full p-6 text-left flex items-center justify-between gap-4 font-bold text-white hover:text-primary-light transition-colors focus:outline-none"
+                  className="w-full p-6 text-left flex items-center justify-between gap-4 font-bold text-white hover:text-emerald-300 transition-colors focus:outline-none"
                 >
                   <span className="flex items-center gap-3 text-base sm:text-lg">
-                    <FaQuestionCircle className="text-primary text-base shrink-0" />
+                    <FaQuestionCircle className="text-emerald-400 text-base shrink-0" />
                     <span>{faq.question}</span>
                   </span>
                   <motion.div
                     animate={{ rotate: isOpen ? 180 : 0 }}
                     transition={{ duration: 0.3 }}
-                    className="p-2 rounded-full bg-slate-900 text-slate-400 shrink-0"
+                    className={`p-2 rounded-full transition-colors shrink-0 ${isOpen ? 'bg-emerald-500/20 text-emerald-300' : 'bg-slate-900 text-slate-400'}`}
                   >
                     <FaChevronDown className="text-xs" />
                   </motion.div>

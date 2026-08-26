@@ -17,7 +17,7 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="bg-darkBg min-h-screen text-slate-300 font-sans selection:bg-primary/30 selection:text-primary overflow-x-hidden">
+    <div className="bg-darkBg min-h-screen text-slate-300 font-sans selection:bg-emerald-500/30 selection:text-emerald-200 overflow-x-hidden">
       <Navbar />
       <main>
         <Hero />

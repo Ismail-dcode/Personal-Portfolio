@@ -18,7 +18,7 @@ const SectionHeading = ({ title, subtitle }) => {
         whileInView={{ opacity: 1, scaleX: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5, delay: 0.2 }}
-        className="w-24 h-1 bg-primary mx-auto rounded-full mb-4"
+        className="w-24 h-1 bg-emerald-500 mx-auto rounded-full mb-4 shadow-glow-primary"
       />
       {subtitle && (
         <motion.p 

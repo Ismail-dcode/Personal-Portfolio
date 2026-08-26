@@ -16,10 +16,10 @@ const Resume = () => {
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          className="mt-12 bg-cardBg border border-slate-700/50 rounded-2xl p-6 sm:p-8 text-center shadow-lg hover:shadow-primary/5 transition-all"
+          className="mt-12 bg-cardBg border border-slate-700/50 rounded-2xl p-6 sm:p-8 text-center shadow-lg hover:shadow-emerald-500/10 transition-all"
         >
-          <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-            <FaFileDownload className="text-3xl text-primary" />
+          <div className="w-20 h-20 bg-emerald-500/10 rounded-full flex items-center justify-center mx-auto mb-6">
+            <FaFileDownload className="text-3xl text-emerald-400" />
           </div>
           
           <h3 className="text-2xl font-bold text-white mb-4">Curriculum Vitae</h3>
@@ -39,7 +39,7 @@ const Resume = () => {
             <a 
               href="/assets/Ismailshaikh_R.pdf" 
               download
-              className="w-full sm:w-auto flex items-center justify-center gap-2 px-8 py-3 bg-primary hover:bg-sky-400 text-slate-900 font-bold rounded-lg transition-colors"
+              className="w-full sm:w-auto flex items-center justify-center gap-2 px-8 py-3 bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-400 hover:to-green-500 text-slate-950 font-extrabold rounded-lg transition-colors shadow-glow-primary"
             >
               <FaFileDownload /> Download PDF
             </a>

@@ -23,7 +23,7 @@ const About = () => {
             <h3 className="text-2xl font-bold text-white mb-2">
               Shaikh Ismail Sardar
             </h3>
-            <p className="text-accentCyan font-mono text-sm font-semibold">
+            <p className="text-emerald-400 font-mono text-sm font-semibold">
               Computer Science & Engineering Student (Expected 2027) | Cloud & DevOps Enthusiast
             </p>
           </div>
@@ -33,20 +33,20 @@ const About = () => {
           </p>
 
           <div className="pt-4 border-t border-slate-800/80">
-            <h4 className="text-primary font-bold text-base mb-3 flex items-center gap-2">
-              <FaCertificate className="text-primary" /> Certifications & Training
+            <h4 className="text-emerald-400 font-bold text-base mb-3 flex items-center gap-2">
+              <FaCertificate className="text-emerald-400" /> Certifications & Training
             </h4>
             <ul className="space-y-2.5 text-slate-300 text-sm sm:text-base">
               <li className="flex items-center gap-3">
-                <span className="w-2 h-2 rounded-full bg-primary shrink-0" />
+                <span className="w-2 h-2 rounded-full bg-emerald-400 shrink-0 shadow-glow-primary" />
                 <span><strong className="text-white">RHCSA</strong> (Red Hat Certified System Administrator) Passed [270/300]</span>
               </li>
               <li className="flex items-center gap-3">
-                <span className="w-2 h-2 rounded-full bg-accentCyan shrink-0" />
+                <span className="w-2 h-2 rounded-full bg-green-400 shrink-0" />
                 <span><strong className="text-white">Cloud(AWS)</strong> SAA-C03 (Pursuing)</span>
               </li>
               <li className="flex items-center gap-3">
-                <span className="w-2 h-2 rounded-full bg-accentCyan shrink-0" />
+                <span className="w-2 h-2 rounded-full bg-teal-400 shrink-0" />
                 <span><strong className="text-white">Redhat(OpenShift)</strong> DO180 (Pursuing)</span>
               </li>
             </ul>

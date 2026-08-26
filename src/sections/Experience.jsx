@@ -9,7 +9,7 @@ const Experience = () => {
   return (
     <section id="experience" className="py-14 relative overflow-hidden bg-radial-grid">
       {/* Background glow */}
-      <div className="absolute top-1/2 left-0 w-[450px] h-[450px] bg-primary/10 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute top-1/2 left-0 w-[450px] h-[450px] bg-emerald-500/10 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionTitle
@@ -20,31 +20,31 @@ const Experience = () => {
         />
 
         {/* Vertical Timeline Container */}
-        <div className="relative pl-6 sm:pl-10 border-l-2 border-primary/30 space-y-12">
+        <div className="relative pl-6 sm:pl-10 border-l-2 border-emerald-500/40 space-y-12">
           {portfolioData.experience.map((exp, idx) => (
             <div key={idx} className="relative group">
               {/* Glowing Node Point */}
-              <div className="absolute -left-[31px] sm:-left-[47px] top-1.5 w-6 h-6 rounded-full bg-slate-950 border-2 border-primary group-hover:bg-primary group-hover:scale-125 shadow-glow-primary transition-all duration-300 flex items-center justify-center">
-                <span className="w-2 h-2 rounded-full bg-accentCyan animate-pulse" />
+              <div className="absolute -left-[31px] sm:-left-[47px] top-1.5 w-6 h-6 rounded-full bg-slate-950 border-2 border-emerald-500 group-hover:bg-emerald-500 group-hover:scale-125 shadow-glow-primary transition-all duration-300 flex items-center justify-center">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
               </div>
 
               {/* Experience Card */}
               <GlassCard
                 delay={idx * 0.15}
-                className="p-6 sm:p-8 border border-white/10 group-hover:border-primary/40 transition-all"
+                className="p-6 sm:p-8 border border-white/10 group-hover:border-emerald-500/50 transition-all"
               >
                 {/* Header Info */}
                 <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 border border-primary/30 text-primary-light text-xs font-mono font-bold">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs font-mono font-bold">
                     <FaCalendarAlt className="text-[10px]" /> {exp.period}
                   </span>
-                  <span className="text-xs font-mono text-accentCyan">
+                  <span className="text-xs font-mono text-emerald-400">
                     {exp.company}
                   </span>
                 </div>
 
                 {/* Title */}
-                <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-primary-light transition-colors">
+                <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-emerald-300 transition-colors">
                   {exp.title}
                 </h3>
 
@@ -60,7 +60,7 @@ const Experience = () => {
                   </h4>
                   {exp.highlights.map((item, hIdx) => (
                     <div key={hIdx} className="flex items-start gap-2.5 text-xs text-slate-300">
-                      <FaCheckCircle className="text-primary shrink-0 mt-0.5" />
+                      <FaCheckCircle className="text-emerald-400 shrink-0 mt-0.5" />
                       <span>{item}</span>
                     </div>
                   ))}

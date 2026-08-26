@@ -24,7 +24,7 @@ const Services = () => {
   return (
     <section id="services" className="py-14 relative overflow-hidden">
       {/* Background glow accent */}
-      <div className="absolute top-1/2 left-0 w-96 h-96 bg-primary/10 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute top-1/2 left-0 w-96 h-96 bg-emerald-500/10 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionTitle
@@ -47,16 +47,16 @@ const Services = () => {
                 <div>
                   {/* Icon & Category */}
                   <div className="flex items-center justify-between mb-5">
-                    <div className="w-11 h-11 rounded-2xl bg-gradient-to-br from-primary/20 via-purple-600/20 to-accentCyan/20 flex items-center justify-center text-primary group-hover:text-accentCyan group-hover:scale-110 transition-all border border-primary/30 shadow-glow-primary shrink-0">
+                    <div className="w-11 h-11 rounded-2xl bg-emerald-500/10 flex items-center justify-center text-emerald-400 group-hover:text-green-300 group-hover:scale-110 transition-all border border-emerald-500/30 shadow-sm shrink-0">
                       <IconComponent className="text-lg" />
                     </div>
-                    <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-accentCyan px-2.5 py-1 rounded-full bg-slate-900 border border-accentCyan/30 text-right">
+                    <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-emerald-400 px-2.5 py-1 rounded-full bg-slate-900 border border-emerald-500/30 text-right">
                       {service.category}
                     </span>
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-lg font-bold text-white mb-2.5 leading-snug group-hover:text-primary-light transition-colors">
+                  <h3 className="text-lg font-bold text-white mb-2.5 leading-snug group-hover:text-emerald-300 transition-colors">
                     {service.title}
                   </h3>
 
@@ -69,7 +69,7 @@ const Services = () => {
                   <ul className="space-y-2 mb-6">
                     {service.features.map((feature, fIdx) => (
                       <li key={fIdx} className="flex items-center gap-2 text-xs text-slate-300">
-                        <FaCheck className="text-primary text-xs shrink-0" />
+                        <FaCheck className="text-emerald-400 text-xs shrink-0" />
                         <span className="line-clamp-1">{feature}</span>
                       </li>
                     ))}
@@ -79,7 +79,7 @@ const Services = () => {
                 {/* Learn More Button */}
                 <button
                   onClick={() => setSelectedService(service)}
-                  className="w-full pt-3.5 border-t border-slate-800/80 flex items-center justify-between text-xs font-bold text-slate-300 group-hover:text-primary-light transition-colors"
+                  className="w-full pt-3.5 border-t border-slate-800/80 flex items-center justify-between text-xs font-bold text-slate-300 group-hover:text-emerald-300 transition-colors"
                 >
                   <span>Learn More Details</span>
                   <FaArrowRight className="text-xs group-hover:translate-x-1 transition-transform" />
@@ -106,7 +106,7 @@ const Services = () => {
               initial={{ opacity: 0, scale: 0.95, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
-              className="relative w-full max-w-lg glass-panel bg-slate-900/95 rounded-2xl border border-primary/40 p-6 sm:p-8 z-10 shadow-2xl"
+              className="relative w-full max-w-lg glass-panel bg-slate-900/95 rounded-2xl border border-emerald-500/30 p-6 sm:p-8 z-10 shadow-2xl"
             >
               <button
                 onClick={() => setSelectedService(null)}
@@ -115,7 +115,7 @@ const Services = () => {
                 <FaTimes />
               </button>
 
-              <span className="text-xs font-mono font-bold text-accentCyan uppercase tracking-widest">
+              <span className="text-xs font-mono font-bold text-emerald-400 uppercase tracking-widest">
                 {selectedService.category}
               </span>
               <h3 className="text-2xl font-bold text-white mt-1 mb-4">
@@ -131,7 +131,7 @@ const Services = () => {
                 </h4>
                 {selectedService.features.map((feature, idx) => (
                   <div key={idx} className="flex items-center gap-3 text-sm text-slate-200">
-                    <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center text-primary text-xs">
+                    <div className="w-5 h-5 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-400 text-xs">
                       <FaCheck />
                     </div>
                     <span>{feature}</span>
@@ -142,7 +142,7 @@ const Services = () => {
               <a
                 href="#contact"
                 onClick={() => setSelectedService(null)}
-                className="block text-center w-full py-3 rounded-xl bg-primary text-white font-bold shadow-glow-primary hover:bg-primary-hover transition-all"
+                className="block text-center w-full py-3 rounded-xl bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-400 hover:to-green-500 text-slate-950 font-extrabold shadow-glow-primary transition-all"
               >
                 Request Service Quote
               </a>

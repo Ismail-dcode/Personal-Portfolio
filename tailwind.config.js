@@ -7,19 +7,19 @@ export default {
   theme: {
     extend: {
       colors: {
-        darkBg: "#05020a",
-        darkSurface: "#0d061a",
-        cardBg: "rgba(22, 10, 38, 0.65)",
-        cardBorder: "rgba(183, 33, 255, 0.18)",
+        darkBg: "#06110b",
+        darkSurface: "#0a1c12",
+        cardBg: "rgba(10, 28, 18, 0.75)",
+        cardBorder: "rgba(34, 197, 94, 0.18)",
         primary: {
-          DEFAULT: "#b721ff",
-          hover: "#d056ff",
-          light: "#e28cff",
-          dark: "#7c00c7",
+          DEFAULT: "#10b981",
+          hover: "#059669",
+          light: "#4ade80",
+          dark: "#047857",
         },
-        accentCyan: "#00f0ff",
+        accentCyan: "#2dd4bf",
         accentEmerald: "#10b981",
-        accentViolet: "#6366f1",
+        accentViolet: "#a3e635",
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
@@ -47,8 +47,8 @@ export default {
       },
       boxShadow: {
         'glass': '0 8px 32px 0 rgba(0, 0, 0, 0.37)',
-        'glow-primary': '0 0 25px rgba(183, 33, 255, 0.35)',
-        'glow-cyan': '0 0 25px rgba(0, 240, 255, 0.35)',
+        'glow-primary': '0 10px 30px -5px rgba(16, 185, 129, 0.35)',
+        'glow-cyan': '0 10px 30px -5px rgba(74, 222, 128, 0.35)',
       }
     },
   },

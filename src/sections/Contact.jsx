@@ -96,8 +96,8 @@ const Contact = () => {
   return (
     <section id="contact" className="py-14 relative overflow-hidden bg-slate-950 border-t border-slate-800">
       {/* Background Orbs */}
-      <div className="absolute top-1/4 right-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[150px] pointer-events-none" />
-      <div className="absolute bottom-10 left-10 w-[400px] h-[400px] bg-accentCyan/10 rounded-full blur-[130px] pointer-events-none" />
+      <div className="absolute top-1/4 right-0 w-[500px] h-[500px] bg-emerald-500/10 rounded-full blur-[150px] pointer-events-none" />
+      <div className="absolute bottom-10 left-10 w-[400px] h-[400px] bg-green-400/5 rounded-full blur-[130px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionTitle
@@ -127,7 +127,7 @@ const Contact = () => {
             {/* Direct Contact Cards */}
             <GlassCard className="p-6 border border-white/10 space-y-5">
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center text-primary shrink-0">
+                <div className="w-10 h-10 rounded-xl bg-emerald-500/20 flex items-center justify-center text-emerald-400 shrink-0">
                   <FaEnvelope className="text-lg" />
                 </div>
                 <div>
@@ -136,7 +136,7 @@ const Contact = () => {
                   </span>
                   <a
                     href={`mailto:${contactInfo.email}`}
-                    className="text-white font-bold text-sm sm:text-base hover:text-primary-light transition-colors break-all"
+                    className="text-white font-bold text-sm sm:text-base hover:text-emerald-300 transition-colors break-all"
                   >
                     {contactInfo.email}
                   </a>
@@ -144,7 +144,7 @@ const Contact = () => {
               </div>
 
               <div className="flex items-start gap-4 pt-4 border-t border-slate-800">
-                <div className="w-10 h-10 rounded-xl bg-accentCyan/20 flex items-center justify-center text-accentCyan shrink-0">
+                <div className="w-10 h-10 rounded-xl bg-green-500/20 flex items-center justify-center text-green-400 shrink-0">
                   <FaPhone className="text-lg" />
                 </div>
                 <div>
@@ -158,7 +158,7 @@ const Contact = () => {
               </div>
 
               <div className="flex items-start gap-4 pt-4 border-t border-slate-800">
-                <div className="w-10 h-10 rounded-xl bg-purple-600/20 flex items-center justify-center text-purple-400 shrink-0">
+                <div className="w-10 h-10 rounded-xl bg-slate-800 flex items-center justify-center text-slate-300 shrink-0">
                   <FaMapMarkerAlt className="text-lg" />
                 </div>
 
@@ -187,7 +187,7 @@ const Contact = () => {
                       href={social.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-4 py-2 rounded-xl bg-slate-900 hover:bg-primary/20 text-slate-300 hover:text-white border border-slate-800 hover:border-primary/40 text-xs font-semibold flex items-center gap-2 transition-all"
+                      className="px-4 py-2 rounded-xl bg-slate-900 hover:bg-emerald-500/20 text-slate-300 hover:text-emerald-300 border border-slate-800 hover:border-emerald-500/40 text-xs font-semibold flex items-center gap-2 transition-all"
                     >
                       <IconComponent />
                       <span>{social.name}</span>
@@ -200,7 +200,7 @@ const Contact = () => {
 
           {/* Right Side: Contact Form (7 cols) */}
           <div className="lg:col-span-7">
-            <GlassCard className="p-8 sm:p-10 border border-primary/30">
+            <GlassCard className="p-8 sm:p-10 border border-slate-800">
               <h3 className="text-2xl font-bold text-white mb-2">
                 Send a Message
               </h3>
@@ -243,7 +243,7 @@ const Contact = () => {
                       value={formState.name}
                       onChange={handleChange}
                       placeholder="e.g. Alex Johnson"
-                      className="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-800 text-white text-sm focus:border-primary focus:outline-none transition-colors"
+                      className="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-800 text-white text-sm focus:border-emerald-500 focus:outline-none transition-colors"
                     />
                   </div>
 
@@ -258,7 +258,7 @@ const Contact = () => {
                       value={formState.email}
                       onChange={handleChange}
                       placeholder="e.g. alex@company.com"
-                      className="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-800 text-white text-sm focus:border-primary focus:outline-none transition-colors"
+                      className="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-800 text-white text-sm focus:border-emerald-500 focus:outline-none transition-colors"
                     />
                   </div>
                 </div>
@@ -274,7 +274,7 @@ const Contact = () => {
                       value={formState.subject}
                       onChange={handleChange}
                       placeholder="e.g. Remote Internship / Project Role"
-                      className="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-800 text-white text-sm focus:border-primary focus:outline-none transition-colors"
+                      className="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-800 text-white text-sm focus:border-emerald-500 focus:outline-none transition-colors"
                     />
                   </div>
 
@@ -286,7 +286,7 @@ const Contact = () => {
                       name="budget"
                       value={formState.budget}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-800 text-white text-sm focus:border-primary focus:outline-none transition-colors"
+                      className="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-800 text-white text-sm focus:border-emerald-500 focus:outline-none transition-colors"
                     >
                       <option value="Remote Internship">Remote Internship</option>
                       <option value="Entry-Level Job / Role">Entry-Level Job / Role</option>
@@ -307,14 +307,14 @@ const Contact = () => {
                     value={formState.message}
                     onChange={handleChange}
                     placeholder="Describe your project goals, tech stack preferences, timeline, or scope..."
-                    className="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-800 text-white text-sm focus:border-primary focus:outline-none transition-colors resize-none"
+                    className="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-800 text-white text-sm focus:border-emerald-500 focus:outline-none transition-colors resize-none"
                   />
                 </div>
 
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full py-4 rounded-xl bg-gradient-to-r from-primary via-purple-600 to-indigo-600 text-white font-bold text-sm shadow-glow-primary hover:shadow-primary/50 flex items-center justify-center gap-2 transition-all disabled:opacity-50 cursor-pointer"
+                  className="w-full py-4 rounded-xl bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-400 hover:to-green-500 text-slate-950 font-extrabold text-sm shadow-glow-primary flex items-center justify-center gap-2 transition-all disabled:opacity-50 cursor-pointer"
                 >
                   {isSubmitting ? (
                     <span>Sending...</span>

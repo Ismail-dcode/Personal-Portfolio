@@ -42,7 +42,7 @@ const Deployments = () => {
                 {/* Screenshot Placeholder Box */}
                 <div className="relative h-32 w-full rounded-xl overflow-hidden bg-slate-900 mb-4 border border-slate-800 flex items-center justify-center group-hover:border-emerald-500/30 transition-colors">
                   <div className="text-center p-3">
-                    <FaServer className="text-2xl text-accentEmerald/60 mx-auto mb-1 group-hover:scale-110 transition-transform" />
+                    <FaServer className="text-2xl text-emerald-400/60 mx-auto mb-1 group-hover:scale-110 transition-transform" />
                     <span className="text-[10px] font-mono text-slate-400 block">
                       [ Screenshot Placeholder ]
                     </span>

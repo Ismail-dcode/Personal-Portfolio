@@ -14,7 +14,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
   overflow-x: hidden;
-  background-color: #05020a;
+  background-color: #06110b;
   color: #e2e8f0;
   font-family: 'Inter', sans-serif;
 }
@@ -25,17 +25,17 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #070312;
+  background: #06110b;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #261142;
+  background: #15803d;
   border-radius: 5px;
-  border: 2px solid #070312;
+  border: 2px solid #06110b;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #b721ff;
+  background: #10b981;
 }
 
 #root {
@@ -44,10 +44,10 @@ body {
 
 @layer utilities {
   .glass-panel {
-    background: rgba(18, 9, 36, 0.65);
+    background: rgba(10, 28, 18, 0.75);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(183, 33, 255, 0.15);
+    border: 1px solid rgba(34, 197, 94, 0.2);
   }
 
   .glass-panel-hover {
@@ -55,34 +55,34 @@ body {
   }
 
   .glass-panel-hover:hover {
-    background: rgba(26, 12, 50, 0.8);
-    border-color: rgba(183, 33, 255, 0.4);
-    box-shadow: 0 10px 30px -10px rgba(183, 33, 255, 0.25);
+    background: rgba(15, 42, 27, 0.85);
+    border-color: rgba(74, 222, 128, 0.4);
+    box-shadow: 0 10px 30px -10px rgba(16, 185, 129, 0.25);
     transform: translateY(-4px);
   }
 
   .text-glow {
-    text-shadow: 0 0 15px rgba(183, 33, 255, 0.6), 0 0 35px rgba(183, 33, 255, 0.3);
+    text-shadow: 0 0 15px rgba(16, 185, 129, 0.4);
   }
 
   .text-glow-cyan {
-    text-shadow: 0 0 15px rgba(0, 240, 255, 0.6), 0 0 35px rgba(0, 240, 255, 0.3);
+    text-shadow: 0 0 15px rgba(74, 222, 128, 0.4);
   }
 
   .text-gradient {
-    background: linear-gradient(135deg, #ffffff 0%, #d8b4fe 50%, #b721ff 100%);
+    background: linear-gradient(135deg, #ffffff 0%, #86efac 50%, #10b981 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
   .text-gradient-cyan {
-    background: linear-gradient(135deg, #ffffff 0%, #a5f3fc 50%, #00f0ff 100%);
+    background: linear-gradient(135deg, #ffffff 0%, #a7f3d0 50%, #2dd4bf 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
   .bg-radial-grid {
-    background-image: radial-gradient(rgba(183, 33, 255, 0.12) 1px, transparent 1px);
+    background-image: radial-gradient(rgba(34, 197, 94, 0.08) 1px, transparent 1px);
     background-size: 32px 32px;
   }
 }

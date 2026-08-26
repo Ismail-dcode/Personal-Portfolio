@@ -22,16 +22,16 @@ const GitHub = () => {
 
   const levelColors = [
     'bg-slate-900 border-slate-800',
-    'bg-purple-950 border-purple-800',
-    'bg-purple-800 border-purple-600',
-    'bg-primary border-primary-light',
-    'bg-accentCyan border-cyan-300 shadow-glow-cyan'
+    'bg-emerald-950 border-emerald-900',
+    'bg-emerald-800 border-emerald-700',
+    'bg-emerald-600 border-emerald-500',
+    'bg-green-400 border-green-300'
   ];
 
   return (
     <section id="github" className="py-14 relative overflow-hidden bg-slate-950/80 border-y border-slate-800/80">
       {/* Glow accent */}
-      <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[150px] pointer-events-none" />
+      <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-emerald-500/10 rounded-full blur-[150px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionTitle
@@ -71,7 +71,7 @@ const GitHub = () => {
                   Contribution Activity Matrix
                 </h3>
                 <span className="text-xs font-mono text-slate-400">
-                  {github.username} • 500+ Contributions in the last year
+                  {github.username} • 240+ Contributions in the last year
                 </span>
               </div>
             </div>
@@ -105,7 +105,7 @@ const GitHub = () => {
           {/* Top Repositories (8 cols) */}
           <div className="lg:col-span-8 space-y-4">
             <h3 className="text-lg font-bold text-white flex items-center gap-2">
-              <FaCode className="text-primary" /> Top Open-Source Repositories
+              <FaCode className="text-emerald-400" /> Top Open-Source Repositories
             </h3>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -119,14 +119,14 @@ const GitHub = () => {
                 >
                   <GlassCard
                     delay={idx * 0.1}
-                    className="p-5 flex flex-col justify-between h-full border border-white/10 hover:border-primary/40 group transition-all"
+                    className="p-5 flex flex-col justify-between h-full border border-white/10 hover:border-emerald-500/50 group transition-all"
                   >
                     <div>
                       <div className="flex items-center justify-between mb-2">
-                        <h4 className="text-sm font-bold text-white group-hover:text-primary-light transition-colors line-clamp-1">
+                        <h4 className="text-sm font-bold text-white group-hover:text-emerald-300 transition-colors line-clamp-1">
                           {repo.name}
                         </h4>
-                        <span className="px-2 py-0.5 rounded bg-primary/10 text-[10px] font-mono text-primary-light shrink-0 ml-2">
+                        <span className="px-2 py-0.5 rounded bg-emerald-500/10 text-[10px] font-mono text-emerald-300 shrink-0 ml-2">
                           {repo.language}
                         </span>
                       </div>
@@ -190,11 +190,11 @@ const GitHub = () => {
               </h4>
               <div className="space-y-3 text-xs">
                 <div className="flex items-start gap-2 text-slate-300">
-                  <FaCode className="text-primary mt-0.5 shrink-0" />
-                  <span>Pushed 3 commits to <code className="text-accentCyan font-mono">main</code> on <span className="text-white font-medium">serverless-aws-boilerplate</span></span>
+                  <FaCode className="text-emerald-400 mt-0.5 shrink-0" />
+                  <span>Pushed 3 commits to <code className="text-emerald-400 font-mono">main</code> on <span className="text-white font-medium">serverless-aws-boilerplate</span></span>
                 </div>
                 <div className="flex items-start gap-2 text-slate-300">
-                  <FaCode className="text-emerald-400 mt-0.5 shrink-0" />
+                  <FaCode className="text-green-400 mt-0.5 shrink-0" />
                   <span>Merged PR #42: <span className="text-white font-medium">Add WebAssembly data parser</span></span>
                 </div>
               </div>
