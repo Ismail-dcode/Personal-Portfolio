@@ -27,7 +27,7 @@ export const portfolioData = {
     cta: {
       primary: { text: "View Projects", href: "#projects" },
       secondary: { text: "Get In Touch", href: "#contact" },
-      tertiary: { text: "Download Resume", href: "/assets/Ismailshaikh_R.pdf" }
+      tertiary: { text: "Download Resume", href: "/assets/IsmailShaikh_Resume.pdf" }
     },
     floatingBadges: [
       { name: "AWS Cloud", icon: "FaAws", color: "from-amber-500 to-orange-500" },
