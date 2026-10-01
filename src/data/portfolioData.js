@@ -18,7 +18,7 @@ export const portfolioData = {
 
   // Hero Section Data
   hero: {
-    image: "/assets/Profile-0.png",
+    image: "/assets/Profile-Pic.jpg",
     badge: "Available for Remote Work & Internships",
     titlePrefix: "Building & Automating",
     titleHighlight: "Cloud Architecture",
@@ -102,7 +102,7 @@ export const portfolioData = {
     },
     {
       id: "proj-2",
-      title: "Aura Notes — Production AWS Deployment Project",
+      title: "CRUD-App — Production AWS Deployment Project",
       category: "AWS Cloud & DevOps",
       description: "Production-grade AWS deployment featuring a Dockerized CRUD app with EC2 Auto Scaling, Application Load Balancer, Amazon ECR, Amazon RDS MySQL, and CloudWatch.",
       image: "/assets/aura.png",
@@ -123,7 +123,7 @@ export const portfolioData = {
       image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80",
       tags: ["AWS S3", "AWS CloudFront", "Route53", "IAM", "Bash"],
       liveUrl: "https://github.com/Ismail-dcode",
-      githubUrl: "https://github.com/Ismail-dcode",
+      githubUrl: "https://github.com/Ismail-dcode/AWS-S3-CloudFront-Project",
       details: {
         problem: "Distributing static web assets globally with minimal latency and strict security access.",
         solution: "Configured AWS S3 bucket policies, CloudFront SSL edge distribution, and automated deployment scripts via AWS CLI.",
@@ -303,18 +303,38 @@ export const portfolioData = {
   // Experience Timeline
   experience: [
     {
+      period: "Jul 2026 — Present",
+      title: "Technical Support Engineer",
+      company: "Global IT Providers",
+      type: "Internship · Remote",
+      duration: "4 mos",
+      description: "Providing technical support and troubleshooting in a cloud-native remote environment while gaining hands-on enterprise IT experience.",
+      highlights: [
+        "Provide technical support and troubleshoot Linux, system, networking, and application-related issues in a remote environment.",
+        "Apply cloud-native architecture and infrastructure concepts to understand, diagnose, and resolve technical issues.",
+        "Work with system administration, troubleshooting, and infrastructure technologies while gaining practical experience in enterprise IT environments."
+      ],
+      skills: ["Technical Support", "Cloud-Native Architecture", "Linux Administration", "Networking"]
+    },
+    {
       period: "2023 — 2027 (Expected)",
       title: "B.Tech in Computer Science & Engineering",
       company: "Degree Student",
+      type: "Education",
+      duration: "4 years",
       description: "Pursuing B.Tech degree in Computer Science & Engineering with a focus on Cloud Computing, Operating Systems, Computer Networks, Software Engineering, and Database Management.",
-      highlights: ["Specializing in Cloud Architecture & DevOps", "Hands-on projects with AWS, Linux, and Docker", "Actively seeking remote work & DevOps internships"]
+      highlights: ["Specializing in Cloud Architecture & DevOps", "Hands-on projects with AWS, Linux, and Docker", "Actively seeking remote work & DevOps internships"],
+      skills: ["Cloud Computing", "Operating Systems", "Computer Networks", "Software Engineering"]
     },
     {
       period: "2024 — Present",
       title: "Cloud & DevOps Learner & Developer",
       company: "Personal Projects & Independent Practice",
+      type: "Self-Directed",
+      duration: "2+ years",
       description: "Building cloud architectures, containerized web applications, automated CI/CD pipelines, and practicing Linux system administration labs.",
-      highlights: ["RHCSA (Red Hat Certified System Administrator) training", "Automated deployment pipelines with GitHub Actions", "Maintains active GitHub repositories and open projects"]
+      highlights: ["RHCSA (Red Hat Certified System Administrator) training", "Automated deployment pipelines with GitHub Actions", "Maintains active GitHub repositories and open projects"],
+      skills: ["AWS", "Docker", "GitHub Actions", "Linux"]
     }
   ],
 
@@ -434,7 +454,7 @@ export const portfolioData = {
 
   // Contact Info
   contactInfo: {
-    email: "ismailpromt2i@gmail.com",
+    email: "ismail2i.shaik@gmail.com",
     phone: "+91 7719877580",
     location: "India (Available for Global Remote Roles)",
     availability: "Open for Internships & Remote Opportunities",
