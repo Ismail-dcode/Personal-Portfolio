@@ -236,7 +236,7 @@ const Work = ({ onNavigate }) => {
           variants={fadeInLeft}
           className="font-display text-lg italic sm:text-2xl sm:text-3xl"
         >
-          Open for internships and remote roles.
+          Open for contract, freelancing, remote jobs, and Cloud & DevOps roles.
         </motion.p>
         <motion.a
           variants={fadeInRight}

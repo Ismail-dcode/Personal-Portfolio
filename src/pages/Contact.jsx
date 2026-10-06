@@ -80,7 +80,7 @@ const Contact = () => {
           <h1 className="mt-3 font-display text-5xl italic leading-tight sm:text-7xl">Let&apos;s Talk</h1>
         </div>
         <p className="max-w-md text-sm leading-relaxed text-mute lg:col-span-5">
-          Open for internships, remote roles, and focused cloud or DevOps work.
+          Open for contract, freelancing, remote jobs, and Cloud & DevOps roles.
         </p>
       </section>
 
@@ -163,9 +163,21 @@ const Contact = () => {
           <button
             type="submit"
             disabled={sending}
-            className="grid h-12 place-items-center bg-paper text-xs font-medium uppercase tracking-[0.18em] text-ink disabled:opacity-50"
+            className="flex h-12 items-center justify-center gap-2 bg-paper text-xs font-medium uppercase tracking-[0.18em] text-ink disabled:opacity-50"
           >
-            {sending ? 'Sending' : 'Send'}
+            {sending && (
+              <svg
+                className="h-4 w-4 animate-spin"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z" />
+              </svg>
+            )}
+            {sending ? 'Sending...' : 'Send'}
           </button>
         </form>
       </section>

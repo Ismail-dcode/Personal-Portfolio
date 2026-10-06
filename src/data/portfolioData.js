@@ -19,7 +19,7 @@ export const portfolioData = {
   // Hero Section Data
   hero: {
     image: "/assets/Profile-Pic.jpg",
-    badge: "Available for Remote Work & Internships",
+    badge: "Open for Contract, Freelancing, Remote Jobs & Cloud DevOps Roles",
     titlePrefix: "Building & Automating",
     titleHighlight: "Cloud Architecture",
     titleSuffix: " & Cloud-Native Solutions",
@@ -85,6 +85,21 @@ export const portfolioData = {
 
   // Featured Projects
   projects: [
+    {
+      id: "proj-memory-dairy",
+      title: "Memory Diary — Cloud-Native Photo Diary App",
+      category: "Full-Stack Cloud & DevOps",
+      description: "A private digital photo diary for capturing and managing personal memories with photos, thoughts, places, and dates. React frontend, Node.js/Express backend, Amazon DynamoDB for data, and Amazon S3 for photo storage, containerized with Docker and deployed on Render.",
+      image: "/assets/Memory-dairy-app.jpeg",
+      tags: ["React", "Node.js", "Express", "Amazon DynamoDB", "Amazon S3", "Docker", "GitHub Actions", "Render"],
+      liveUrl: "https://memory-dairy.ismailshaikh.in/",
+      githubUrl: "https://github.com/Ismail-dcode/Cloud-Memory-app",
+      details: {
+        problem: "Personal memories and photos need a private, reliable, and easily accessible cloud-based diary instead of scattered local storage.",
+        solution: "Built a full-stack app with React, Node.js/Express, JWT auth, bcrypt, DynamoDB metadata storage, S3 presigned photo URLs, Dockerized deployment, and a GitHub Actions CI/CD pipeline pushing to Docker Hub and Render.",
+        keyResults: ["Secure JWT-based authentication", "Private S3 photo storage with presigned URLs", "Automated Docker build, push & Render deploy pipeline"]
+      }
+    },
     {
       id: "proj-infrasense",
       title: "InfraSense — Cloud Infrastructure Recommendation Platform",
@@ -457,7 +472,7 @@ export const portfolioData = {
     email: "ismail2i.shaik@gmail.com",
     phone: "+91 7719877580",
     location: "India (Available for Global Remote Roles)",
-    availability: "Open for Internships & Remote Opportunities",
+    availability: "Open for Contract, Freelancing, Remote Jobs & Cloud DevOps Roles",
     socials: [
       { name: "GitHub", url: "https://github.com/Ismail-dcode", icon: "FaGithub" },
       { name: "LinkedIn", url: "https://www.linkedin.com/in/ismail-shaikh-19798a335", icon: "FaLinkedin" },
