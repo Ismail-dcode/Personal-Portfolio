@@ -92,7 +92,7 @@ export const portfolioData = {
       description: "A private digital photo diary for capturing and managing personal memories with photos, thoughts, places, and dates. React frontend, Node.js/Express backend, Amazon DynamoDB for data, and Amazon S3 for photo storage, containerized with Docker and deployed on Render.",
       image: "/assets/Memory-dairy-app.jpeg",
       tags: ["React", "Node.js", "Express", "Amazon DynamoDB", "Amazon S3", "Docker", "GitHub Actions", "Render"],
-      liveUrl: "https://memory-dairy.ismailshaikh.in/",
+      liveUrl: "https://memory-diary.ismailshaikh.in/",
       githubUrl: "https://github.com/Ismail-dcode/Cloud-Memory-app",
       details: {
         problem: "Personal memories and photos need a private, reliable, and easily accessible cloud-based diary instead of scattered local storage.",
