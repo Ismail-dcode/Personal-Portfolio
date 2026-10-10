@@ -58,8 +58,5 @@ cd Personal-Portfolio
 # Install dependencies
 npm install
 
-# Start the server
-node api/index.js
-
-
-# The app will run at http://localhost:3000
+#To run the command 
+npm run dev
