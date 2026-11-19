@@ -118,9 +118,11 @@ const Intro = ({ children }) => {
                 variants={taglineVariants}
                 initial="hidden"
                 animate="visible"
-                className="font-mono text-[10px] uppercase tracking-[0.3em] text-mute sm:text-xs"
+                className="text-center font-mono text-[10px] uppercase tracking-[0.3em] text-mute sm:text-xs"
               >
-                Cloud & DevOps
+                <span className="block sm:inline">Cloud &amp; DevOps · Freelance Web</span>
+                <span className="hidden sm:inline"> · </span>
+                <span className="block sm:inline">Apps · Content &amp; Video</span>
               </motion.p>
 
               {/* Loading bar */}

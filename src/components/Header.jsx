@@ -4,7 +4,8 @@ import Logo from './Logo';
 const tabs = [
   { id: 'work', label: 'Work', index: '01' },
   { id: 'profile', label: 'Profile', index: '02' },
-  { id: 'contact', label: 'Contact', index: '03' },
+  { id: 'freelance', label: 'Freelance', index: '03' },
+  { id: 'contact', label: 'Contact', index: '04' },
 ];
 
 const Header = ({ active, onChange }) => {
@@ -21,7 +22,7 @@ const Header = ({ active, onChange }) => {
           </span>
         </button>
 
-        <nav className="grid grid-cols-3 gap-x-5 sm:gap-x-8">
+        <nav className="flex items-end gap-x-2.5 sm:gap-x-7">
           {tabs.map((tab) => {
             const isActive = active === tab.id;
             return (
@@ -32,14 +33,14 @@ const Header = ({ active, onChange }) => {
                 className="grid justify-items-end gap-1"
               >
                 <span
-                  className={`font-mono text-[10px] tracking-[0.2em] ${
+                  className={`font-mono text-[9px] tracking-[0.2em] sm:text-[10px] ${
                     isActive ? 'text-paper' : 'text-mute'
                   }`}
                 >
                   {tab.index}
                 </span>
                 <span
-                  className={`relative text-xs font-medium uppercase tracking-[0.18em] sm:text-sm ${
+                  className={`relative text-[10px] font-medium uppercase tracking-[0.12em] sm:text-sm sm:tracking-[0.18em] ${
                     isActive ? 'text-paper' : 'text-mute hover:text-paper'
                   }`}
                 >

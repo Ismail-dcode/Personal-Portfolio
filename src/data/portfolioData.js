@@ -8,6 +8,7 @@ export const portfolioData = {
     { name: "About", href: "#about" },
     { name: "What I Do", href: "#whatido" },
     { name: "Skills", href: "#skills" },
+    { name: "Freelance", href: "#freelance" },
     { name: "Services", href: "#services" },
     { name: "Projects", href: "#projects" },
     { name: "Deployments", href: "#deployments" },
@@ -19,11 +20,11 @@ export const portfolioData = {
   // Hero Section Data
   hero: {
     image: "/assets/Profile-Pic.jpg",
-    badge: "Open for Contract, Freelancing, Remote Jobs & Cloud DevOps Roles",
+    badge: "Open for Work — Full\u2011time · Part\u2011time · Remote · Contracts · Internships",
     titlePrefix: "Building & Automating",
     titleHighlight: "Cloud Architecture",
     titleSuffix: " & Cloud-Native Solutions",
-    subtitle: "Computer Science & Engineering Student (Expected 2027) specializing in AWS Cloud, Linux Systems, Docker Containerization, and CI/CD Automation.",
+    subtitle: "Computer Science & Engineering student (Expected 2027) specializing in AWS Cloud, Linux Systems, Docker, and CI/CD Automation — and a freelance developer who builds websites and apps, manages cloud infrastructure, and writes and edits the content that goes with them.",
     cta: {
       primary: { text: "View Projects", href: "#projects" },
       secondary: { text: "Get In Touch", href: "#contact" },
@@ -39,6 +40,35 @@ export const portfolioData = {
     ]
   },
 
+  // Ways I am available to work
+  availability: [
+    {
+      id: "full-time",
+      label: "Full-time",
+      detail: "Ready to join a team and grow in a Cloud, DevOps, web, or app engineering role."
+    },
+    {
+      id: "part-time",
+      label: "Part-time",
+      detail: "A reliable weekly commitment alongside my degree."
+    },
+    {
+      id: "remote",
+      label: "Remote",
+      detail: "Set up for remote work and comfortable across global time zones."
+    },
+    {
+      id: "contract",
+      label: "Contracts",
+      detail: "Fixed-scope or ongoing contracts with clear deliverables."
+    },
+    {
+      id: "internship",
+      label: "Internships",
+      detail: "Actively looking for internships in Cloud, DevOps, web, and app development."
+    }
+  ],
+
   // Trust / Technology Cards Row
   trustTech: [
     { title: "AWS Cloud", category: "Cloud Infrastructure", icon: "FaCloud", count: "EC2, S3, IAM, Route53" },
@@ -51,7 +81,7 @@ export const portfolioData = {
     { title: "Version Control", category: "Workflow", icon: "FaNetworkWired", count: "Git & GitHub" }
   ],
 
-  // Services Section (6 Cards)
+  // Cloud & DevOps Services
   services: [
     {
       id: "srv-1",
@@ -83,8 +113,279 @@ export const portfolioData = {
     },
   ],
 
+  // Freelance Web Services
+  freelance: {
+    eyebrow: "Freelance Services",
+    title: "Websites, apps, and cloud.",
+    intro: "I design, develop, launch, and maintain websites and apps for small businesses, creators, and independent sellers — and I manage the cloud infrastructure behind them. I also write and edit the content that goes with them. One person from the first sketch to the live product, the launch post, and the monitoring dashboard.",
+    status: "Currently accepting new web, app, and cloud projects",
+    note: "Fixed quote before work starts · Your domain, cloud account, and billing stay in your name · Handover walkthrough and runbook included",
+    services: [
+      {
+        id: "fl-build",
+        icon: "FaLaptopCode",
+        title: "Website Building",
+        description: "New websites built from scratch around your business — landing pages, portfolios, service sites, and product showcases.",
+        features: ["Landing pages & personal sites", "Business & service websites", "Product catalogue builds"]
+      },
+      {
+        id: "fl-app",
+        icon: "FaMobileAlt",
+        title: "App Development",
+        description: "React web apps, dashboards, internal tools, and PWAs — with authentication, APIs, and a database when the project needs one.",
+        features: ["Dashboards & internal tools", "React apps & PWAs", "Auth, APIs & databases"]
+      },
+      {
+        id: "fl-development",
+        icon: "FaCode",
+        title: "Web Development",
+        description: "Clean, responsive front-end development with React, JavaScript, HTML, and CSS — plus Node.js backends when the project needs one.",
+        features: ["React & JavaScript front ends", "Responsive, mobile-first layouts", "APIs and form integrations"]
+      },
+      {
+        id: "fl-design",
+        icon: "FaPalette",
+        title: "Website Designing",
+        description: "Readable interfaces with a consistent visual identity, custom brand colours, and layouts that make your content easy to scan.",
+        features: ["UI layout & visual design", "Brand colours and typography", "Mobile and desktop design"]
+      },
+      {
+        id: "fl-cloud",
+        icon: "FaCloud",
+        title: "Cloud Setup & Migration",
+        description: "AWS accounts, Linux servers, Docker, networking, and SSL — configured from scratch or migrated from an aging host.",
+        features: ["AWS & Linux setup", "Docker & networking", "Hosting migrations"]
+      },
+      {
+        id: "fl-monitoring",
+        icon: "FaChartLine",
+        title: "Cloud Management & Monitoring",
+        description: "Uptime checks, logs, metrics, alerts, backups, patching, and cost reviews — so production stays healthy after launch.",
+        features: ["Uptime, logs & alerts", "Backups & patching", "Cost and security reviews"]
+      },
+      {
+        id: "fl-deployment",
+        icon: "FaRocket",
+        title: "Deployment & Production",
+        description: "Shipping to production on Vercel, Netlify, AWS, or a Linux server — with build settings, environment variables, and CI/CD where useful.",
+        features: ["Vercel, Netlify & AWS deploys", "Environment & build configuration", "Production readiness checks"]
+      },
+      {
+        id: "fl-cicd",
+        icon: "FaCogs",
+        title: "CI/CD & Automation",
+        description: "Build, test, and release pipelines with GitHub Actions, Docker, and repeatable deploy scripts — so every push follows the same path.",
+        features: ["GitHub Actions pipelines", "Docker builds & releases", "Automated deploy checks"]
+      },
+      {
+        id: "fl-domain",
+        icon: "FaGlobe",
+        title: "Domain & DNS Setup",
+        description: "Domain registration guidance, DNS records, custom email routing, and SSL — configured so your site loads on your own name.",
+        features: ["Domain registration guidance", "DNS records & subdomains", "SSL and HTTPS setup"]
+      },
+      {
+        id: "fl-maintenance",
+        icon: "FaTools",
+        title: "Maintenance & Support",
+        description: "Keeping the site and cloud setup healthy after launch — content updates, dependency upgrades, backups, monitoring, and fixes when something breaks.",
+        features: ["Updates & dependency patches", "Backups and uptime checks", "Ongoing fixes and support"]
+      },
+      {
+        id: "fl-content",
+        icon: "FaPenNib",
+        title: "Content Writing",
+        description: "Website copy, blog posts, product descriptions, scripts, and social captions — written to match the brand and the audience.",
+        features: ["Website & landing page copy", "Blog posts and articles", "Product descriptions & scripts"]
+      },
+      {
+        id: "fl-video",
+        icon: "FaVideo",
+        title: "Video Editing",
+        description: "Short-form and long-form edits for reels, shorts, YouTube, and product promos — cuts, captions, pacing, and clean exports.",
+        features: ["Reels, shorts & YouTube edits", "Captions, titles & pacing", "Product and promo videos"]
+      }
+    ],
+    editingTools: [
+      {
+        name: "Adobe Premiere Pro",
+        use: "Long-form edits, cuts, transitions, audio cleanup, and colour."
+      },
+      {
+        name: "CapCut",
+        use: "Short-form social edits, captions, effects, and quick turnarounds."
+      },
+      {
+        name: "VN Video Editor",
+        use: "Fast mobile edits, reels, and everyday cut-downs."
+      },
+      {
+        name: "Adobe Express",
+        use: "Thumbnails, social graphics, and simple brand assets."
+      }
+    ],
+    engagements: [
+      {
+        title: "Landing Page",
+        description: "A focused single page for a person, service, or launch — clear message, strong call to action, fast load.",
+        bestFor: "Portfolios, campaigns, personal brands"
+      },
+      {
+        title: "Business Website",
+        description: "A multi-page site with services, about, contact, and a clear path for customers to reach you.",
+        bestFor: "Local businesses, studios, consultants"
+      },
+      {
+        title: "Product Showcase",
+        description: "A catalogue-style site with categories, product detail pages, and direct WhatsApp, call, and email ordering.",
+        bestFor: "Direct sellers and small catalogues"
+      },
+      {
+        title: "Web App",
+        description: "A React and Node build with authentication, a database, and a real workflow behind it.",
+        bestFor: "Internal tools and small products"
+      },
+      {
+        title: "Cloud Setup",
+        description: "AWS accounts, Linux servers, Docker, networking, SSL, and a deployment path configured from scratch or migrated.",
+        bestFor: "New products and hosting moves"
+      },
+      {
+        title: "Cloud Care",
+        description: "Monitoring, alerts, backups, patching, cost checks, and incident response on a fixed monthly scope.",
+        bestFor: "Live products that need a reliable operator"
+      },
+      {
+        title: "Cloud Audit",
+        description: "A review of your AWS or Linux setup for cost, security, backups, and monitoring gaps — with a prioritised fix list.",
+        bestFor: "Teams inheriting a cloud account"
+      },
+      {
+        title: "Content & Video",
+        description: "Copywriting and short-form video editing for launches, social channels, and product promos.",
+        bestFor: "Brands, creators, and product launches"
+      },
+      {
+        title: "Monthly Retainer",
+        description: "Ongoing website updates, new content, and regular edits on a fixed monthly scope.",
+        bestFor: "Businesses that need steady help"
+      }
+    ],
+    process: [
+      {
+        step: "01",
+        title: "Discovery",
+        description: "A short call to understand the business, the users, and whether this is a website, an app, or a cloud problem."
+      },
+      {
+        step: "02",
+        title: "Scope & Quote",
+        description: "A written scope, timeline, and fixed quote before any work starts."
+      },
+      {
+        step: "03",
+        title: "Architect & Design",
+        description: "Wireframes and a simple architecture — pages, data, cloud services, and the path to production."
+      },
+      {
+        step: "04",
+        title: "Build & Configure",
+        description: "Responsive development, APIs, cloud resources, content placement, and third-party integrations."
+      },
+      {
+        step: "05",
+        title: "Launch & Monitor",
+        description: "Domain, DNS, SSL, deployment checks, uptime alerts, and monitoring before handover."
+      },
+      {
+        step: "06",
+        title: "Maintain & Improve",
+        description: "Ongoing updates, backups, patching, monitoring, and support after handover."
+      }
+    ],
+    faqs: [
+      {
+        question: "What kinds of freelance projects do you take on?",
+        answer: "New websites and web apps, redesigns, cloud setup and migrations, deployment and hosting clean-up, monitoring and ongoing management, domain and DNS setup, CI/CD automation, content writing, and video editing. If it lives on the web or in the cloud, ask."
+      },
+      {
+        question: "Do you also write content and edit video?",
+        answer: "Yes. I write website copy, blog posts, product descriptions, scripts, and social captions, and I edit short-form and long-form video in Adobe Premiere Pro, CapCut, VN, and Adobe Express. Content and video can be part of a website project or booked on their own."
+      },
+      {
+        question: "Do you build apps as well as websites?",
+        answer: "Yes. I build React web apps, dashboards, internal tools, and PWAs with authentication, APIs, and databases. If you need a small product or an internal tool rather than a marketing site, that is a normal project for me."
+      },
+      {
+        question: "Do you manage cloud infrastructure after launch?",
+        answer: "Yes. I set up and look after AWS and Linux environments — uptime checks, logs, metrics, alerts, backups, patching, SSL, and cost reviews. This can be a one-off setup, an audit, or an ongoing monthly arrangement."
+      },
+      {
+        question: "Can you work on an existing website or cloud account?",
+        answer: "Yes. I can redesign an outdated site, fix mobile or performance issues, move a site to a new host, take over maintenance, or clean up an existing AWS or Linux setup without rebuilding everything."
+      },
+      {
+        question: "Do you register the domain and set up hosting?",
+        answer: "Yes. I guide the domain registration, configure DNS and SSL, and deploy to Vercel, Netlify, AWS, or a Linux server. The domain, cloud account, and billing stay in your name."
+      },
+      {
+        question: "How long does a project take?",
+        answer: "A landing page is usually a few days. A multi-page site, product catalogue, or small app typically takes one to three weeks. Cloud setup and monitoring depend on the existing environment; you get a timeline with the quote."
+      },
+      {
+        question: "How do payments work?",
+        answer: "Projects start with a deposit, and the balance is due at handover. The scope, timeline, and amount are agreed in writing before work begins."
+      },
+      {
+        question: "What happens after launch?",
+        answer: "You get a handover walkthrough and all account access. Optional monthly maintenance covers content updates, backups, monitoring, and fixes."
+      }
+    ]
+  },
+
+  // Client testimonials
+  // Drafted from the real project details — replace the quote with the client's exact words before publishing.
+  testimonials: [
+    {
+      id: "test-asclepius",
+      // Draft only — replace `quote` and `shortQuote` with Sardar Shaikh's exact words before publishing.
+      quote: "Ismail understood what my business needed before I could explain it properly. He built the whole site, put it live, and made sure every product leads straight to my WhatsApp and phone. It looks professional, works on every phone, and I can update the products myself.",
+      shortQuote: "He built the whole site, put it live, and made sure every product leads straight to my WhatsApp and phone.",
+      author: "Sardar Shaikh",
+      role: "Authorised Asclepius Wellness Distributor",
+      company: "Asclepius Wellness Pvt. Ltd.",
+      location: "Udgir, Latur, India",
+      project: "Asclepius Wellness — Direct Seller Website",
+      projectUrl: "https://asclepiusclient.vercel.app",
+      projectImage: "/assets/asclepius.png",
+      projectSummary: "A 9-page, 4-language product showcase with 50 products, direct WhatsApp, call, and email ordering, and an admin dashboard for products, banners, categories, and gallery content.",
+      metrics: [
+        { value: "9", label: "Pages" },
+        { value: "50", label: "Products" },
+        { value: "4", label: "Languages" },
+        { value: "1", label: "Admin dashboard" }
+      ],
+      tags: ["HTML5", "CSS3", "JavaScript", "Supabase", "Multi-language", "Vercel"]
+    }
+  ],
+
   // Featured Projects
   projects: [
+    {
+      id: "proj-asclepius",
+      title: "Asclepius Wellness — Direct Seller Website",
+      category: "Client Work · Freelance",
+      description: "A multi-language product showcase built for an authorised Asclepius Wellness distributor — 50 products, category filters, and direct WhatsApp, call, and email ordering, backed by an admin dashboard for products, banners, and gallery content.",
+      image: "/assets/asclepius.png",
+      tags: ["HTML5", "CSS3", "JavaScript", "Supabase", "Multi-language", "Vercel"],
+      liveUrl: "https://asclepiusclient.vercel.app",
+      githubUrl: "https://github.com/Ismail-dcode/Asclepius-Wellness-Pvt-Client",
+      details: {
+        problem: "The client sold Asclepius Wellness products directly but had no professional place to send customers — only scattered catalogue PDFs and chat messages.",
+        solution: "Built a 9-page static website in English, Hindi, Marathi, and Urdu with 50 products, category filtering, a brand re-theme, and every order routed to the seller's WhatsApp, phone, or email. Added a Supabase-backed admin dashboard for products, banners, categories, and gallery content.",
+        keyResults: ["50 products catalogued with direct ordering", "4 languages including right-to-left Urdu", "Client-managed content through an admin dashboard"]
+      }
+    },
     {
       id: "proj-memory-dairy",
       title: "Memory Diary — Cloud-Native Photo Diary App",
@@ -181,6 +482,17 @@ export const portfolioData = {
   // Deployment Showcase Data
   deployments: [
     {
+      id: "dep-asclepius",
+      name: "Asclepius Wellness Client Website",
+      type: "Static + Supabase",
+      hosting: "Vercel",
+      status: "Live",
+      uptime: "Live",
+      region: "Global Edge",
+      latency: "—",
+      url: "https://asclepiusclient.vercel.app"
+    },
+    {
       id: "dep-1",
       name: "Personal Portfolio Website",
       type: "React Edge App",
@@ -263,6 +575,8 @@ export const portfolioData = {
       category: "Cloud & Infrastructure",
       items: [
         { name: "AWS (EC2, S3, IAM)", level: "Intermediate" },
+        { name: "CloudWatch & Monitoring", level: "Intermediate" },
+        { name: "Backups & Recovery", level: "Intermediate" },
         { name: "CloudFront & Route53", level: "Intermediate" },
         { name: "Cloud Native Basics", level: "Advanced" },
         { name: "Vercel / Netlify", level: "Advanced" },
@@ -302,6 +616,24 @@ export const portfolioData = {
         { name: "Command Line (CLI)", level: "Expert" },
         { name: "Canva / Documentation", level: "Intermediate" }
       ]
+    },
+    {
+      category: "Content & Writing",
+      items: [
+        { name: "Content Writing", level: "Intermediate" },
+        { name: "Scripts & Captions", level: "Intermediate" },
+        { name: "Blog Posts & Articles", level: "Intermediate" },
+        { name: "Product Descriptions", level: "Intermediate" }
+      ]
+    },
+    {
+      category: "Video & Graphics",
+      items: [
+        { name: "Adobe Premiere Pro", level: "Intermediate" },
+        { name: "CapCut", level: "Intermediate" },
+        { name: "VN Video Editor", level: "Intermediate" },
+        { name: "Adobe Express", level: "Intermediate" }
+      ]
     }
   ],
 
@@ -318,7 +650,21 @@ export const portfolioData = {
   // Experience Timeline
   experience: [
     {
-      period: "Jul 2026 — Present",
+      period: "Nov 2026 — Present",
+      title: "Freelance Developer",
+      company: "Asclepius Wellness · Client: Sardar Shaikh",
+      type: "Freelance · Remote",
+      duration: "Ongoing",
+      description: "Designed, built, and shipped a multi-language product website for an authorised Asclepius Wellness distributor — from content and design through deployment and handover.",
+      highlights: [
+        "Built a 9-page, 4-language product showcase with 50 products, category filters, and direct WhatsApp, call, and email ordering.",
+        "Re-themed the site to the client's brand and rebuilt content and product imagery from the official company catalogue.",
+        "Deployed on Vercel and added a Supabase-backed admin dashboard for products, banners, categories, and gallery content."
+      ],
+      skills: ["Freelance Delivery", "Web Design", "Content Writing", "HTML/CSS", "JavaScript", "Supabase", "Vercel"]
+    },
+    {
+      period: "Jul 2026 — Oct 2026",
       title: "Technical Support Engineer",
       company: "Global IT Providers",
       type: "Internship · Remote",
@@ -338,7 +684,7 @@ export const portfolioData = {
       type: "Education",
       duration: "4 years",
       description: "Pursuing B.Tech degree in Computer Science & Engineering with a focus on Cloud Computing, Operating Systems, Computer Networks, Software Engineering, and Database Management.",
-      highlights: ["Specializing in Cloud Architecture & DevOps", "Hands-on projects with AWS, Linux, and Docker", "Actively seeking remote work & DevOps internships"],
+      highlights: ["Specializing in Cloud Architecture & DevOps", "Hands-on projects with AWS, Linux, and Docker", "Open to full-time, part-time, remote, contract, and internship roles"],
       skills: ["Cloud Computing", "Operating Systems", "Computer Networks", "Software Engineering"]
     },
     {
@@ -361,7 +707,7 @@ export const portfolioData = {
       { label: "Public Repositories", value: "20+" },
       { label: "Degree Status", value: "B.Tech CSE '27" },
       { label: "Core Focus", value: "Cloud & DevOps" },
-      { label: "Availability", value: "Open for Roles" }
+      { label: "Availability", value: "Open for Work" }
     ],
     languages: [
       { name: "JavaScript / React", percentage: 40, color: "bg-yellow-400" },
@@ -442,8 +788,12 @@ export const portfolioData = {
   // FAQs
   faqs: [
     {
-      question: "Are you available for remote jobs or internships?",
-      answer: "Yes! I am actively looking for remote internships, part-time roles, and entry-level positions in Cloud Engineering, DevOps, and Full-Stack Web Development."
+      question: "What kind of work are you available for?",
+      answer: "I am open to full-time roles, part-time roles, remote work, contracts, and internships. I am also available for freelance web, app, cloud, content, and video projects — building, development, design, domain and DNS setup, deployment, monitoring, cloud management, maintenance, content writing, and video editing."
+    },
+    {
+      question: "Do you take freelance web, app, cloud, content, or video projects?",
+      answer: "Yes. I build websites and React apps, set up and manage AWS or Linux environments, handle domain and DNS, deployment, monitoring, and maintenance, and take on content writing and video editing. You get a fixed quote before work starts, and your domain, cloud account, and billing stay in your name."
     },
     {
       question: "What is your primary area of technical focus?",
@@ -455,15 +805,15 @@ export const portfolioData = {
     },
     {
       question: "What certifications or hands-on training do you have?",
-      answer: "I have trained in Red Hat Certified System Administrator (RHCSA) concepts, AWS Cloud fundamentals, Git & GitHub, and web development."
+      answer: "I hold RHCSA and AWS Solutions Architect Associate (SAA-C03) certifications, and I am currently working through Red Hat OpenShift (DO180)."
     },
     {
       question: "Where are you based and can you work remote hours?",
-      answer: "I am based in India and fully equipped for remote work with flexible scheduling to align with different global time zones."
+      answer: "I am based in India and fully equipped for remote work, with flexible scheduling to align with different global time zones."
     },
     {
       question: "How can I contact or hire you?",
-      answer: "You can reach me via the contact form on this site, email me directly at ismailpromt2i@gmail.com, or connect on LinkedIn and GitHub (@Ismail-dcode)."
+      answer: "You can reach me via the contact form on this site, email me directly at ismail2i.shaik@gmail.com, or connect on LinkedIn and GitHub (@Ismail-dcode). For freelance work, tell me what you need and I will reply with a scope and quote."
     }
   ],
 
@@ -472,7 +822,7 @@ export const portfolioData = {
     email: "ismail2i.shaik@gmail.com",
     phone: "+91 7719877580",
     location: "India (Available for Global Remote Roles)",
-    availability: "Open for Contract, Freelancing, Remote Jobs & Cloud DevOps Roles",
+    availability: "Open for full-time, part-time, remote, contract, and internship roles · Available for freelance web, app, cloud, content, and video projects",
     socials: [
       { name: "GitHub", url: "https://github.com/Ismail-dcode", icon: "FaGithub" },
       { name: "LinkedIn", url: "https://www.linkedin.com/in/ismail-shaikh-19798a335", icon: "FaLinkedin" },

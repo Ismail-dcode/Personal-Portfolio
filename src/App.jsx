@@ -4,11 +4,12 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Work from './pages/Work';
 import Profile from './pages/Profile';
+import Freelance from './pages/Freelance';
 import Contact from './pages/Contact';
 import SmoothScroll from './components/SmoothScroll';
 import Intro from './components/Intro';
 
-const validTabs = ['work', 'profile', 'contact'];
+const validTabs = ['work', 'profile', 'freelance', 'contact'];
 
 function getTabFromHash() {
   const hash = window.location.hash.replace('#', '');
@@ -36,7 +37,7 @@ function App() {
   return (
     <Intro>
       <SmoothScroll>
-        <div className="site-grid relative min-h-screen bg-ink text-paper">
+        <div className="site-grid relative min-h-screen overflow-x-clip bg-ink text-paper">
           <div className="grain" aria-hidden="true" />
           <div className="grid min-h-screen grid-rows-[auto_1fr_auto]">
             <Header active={tab} onChange={onChange} />
@@ -44,6 +45,7 @@ function App() {
               <AnimatePresence mode="wait">
                 {tab === 'work' && <Work key="work" onNavigate={onChange} />}
                 {tab === 'profile' && <Profile key="profile" />}
+                {tab === 'freelance' && <Freelance key="freelance" onNavigate={onChange} />}
                 {tab === 'contact' && <Contact key="contact" />}
               </AnimatePresence>
             </main>

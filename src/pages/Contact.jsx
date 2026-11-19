@@ -12,14 +12,30 @@ const socialIcons = {
 };
 
 const Contact = () => {
-  const { contactInfo } = portfolioData;
+  const { contactInfo, availability } = portfolioData;
   const [formState, setFormState] = useState({
     name: '',
     email: '',
+    type: '',
     message: '',
   });
   const [status, setStatus] = useState({ type: '', text: '' });
   const [sending, setSending] = useState(false);
+
+  const inquiryTypes = [
+    'Full-time role',
+    'Part-time role',
+    'Remote work',
+    'Contract',
+    'Internship',
+    'Freelance website project',
+    'App project',
+    'Cloud setup / migration',
+    'Cloud monitoring / management',
+    'Content writing',
+    'Video editing',
+    'General',
+  ];
 
   const localTime = useMemo(
     () =>
@@ -50,12 +66,12 @@ const Contact = () => {
       await sendEmail({
         from_name: formState.name,
         from_email: formState.email,
-        subject: 'Portfolio inquiry',
-        opportunity_type: 'General',
+        subject: `Portfolio inquiry — ${formState.type || 'General'}`,
+        opportunity_type: formState.type || 'General',
         message: formState.message,
       });
       setStatus({ type: 'ok', text: 'Message sent. I will reply soon.' });
-      setFormState({ name: '', email: '', message: '' });
+      setFormState({ name: '', email: '', type: '', message: '' });
     } catch {
       setStatus({
         type: 'error',
@@ -80,7 +96,7 @@ const Contact = () => {
           <h1 className="mt-3 font-display text-5xl italic leading-tight sm:text-7xl">Let&apos;s Talk</h1>
         </div>
         <p className="max-w-md text-sm leading-relaxed text-mute lg:col-span-5">
-          Open for contract, freelancing, remote jobs, and Cloud & DevOps roles.
+          Open for full-time, part-time, remote, contract, and internship roles — and available for freelance web, app, cloud, content, and video projects. Tell me which one, and I will reply with the next step.
         </p>
       </section>
 
@@ -104,6 +120,30 @@ const Contact = () => {
             </p>
             <p className="text-sm text-mute">Local time {localTime} IST</p>
           </div>
+          <div className="grid gap-2">
+            <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-mute">Open for</span>
+            <div className="flex flex-wrap gap-1.5">
+              {availability.map((item) => (
+                <span
+                  key={item.id}
+                  className="inline-flex items-center gap-1.5 rounded-sm border border-zinc-800 bg-zinc-900/70 px-2.5 py-1 font-mono text-[8px] uppercase tracking-[0.14em] text-zinc-400 sm:text-[9px]"
+                >
+                  <span className="h-1 w-1 rounded-full bg-emerald-400" />
+                  {item.label}
+                </span>
+              ))}
+              <span className="inline-flex items-center gap-1.5 rounded-sm border border-amber-900 bg-amber-950/60 px-2.5 py-1 font-mono text-[8px] uppercase tracking-[0.14em] text-amber-400 sm:text-[9px]">
+                <span className="h-1 w-1 rounded-full bg-amber-400" />
+                Freelance
+              </span>
+            </div>
+          </div>
+          <div className="grid gap-2">
+            <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-mute">Freelance projects</span>
+            <p className="text-sm leading-relaxed text-mute">
+              Send the business name, what you need — website, app, cloud, content, or video — and any deadline. I will reply with a scope and a fixed quote.
+            </p>
+          </div>
           <div className="grid gap-3">
             <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-mute">Links</span>
             <div className="flex flex-wrap gap-3">
@@ -126,6 +166,26 @@ const Contact = () => {
         </div>
 
         <form onSubmit={handleSubmit} className="grid gap-5 bg-ink p-6 sm:p-8 lg:col-span-7">
+          <label className="grid gap-2">
+            <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-mute">
+              I&apos;m reaching out about
+            </span>
+            <select
+              name="type"
+              value={formState.type}
+              onChange={handleChange}
+              className="h-12 border border-line bg-ink px-3 text-sm text-paper outline-none focus:border-paper"
+            >
+              <option value="" className="bg-ink text-paper">
+                Select an option
+              </option>
+              {inquiryTypes.map((type) => (
+                <option key={type} value={type} className="bg-ink text-paper">
+                  {type}
+                </option>
+              ))}
+            </select>
+          </label>
           <label className="grid gap-2">
             <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-mute">Name</span>
             <input
@@ -152,7 +212,8 @@ const Contact = () => {
               rows="5"
               value={formState.message}
               onChange={handleChange}
-              className="border border-line bg-transparent px-3 py-3 text-sm outline-none focus:border-paper"
+              placeholder="For freelance projects: what you need — website, app, cloud, content, or video — any deadline, and a link to your current site or cloud setup (if any)."
+              className="border border-line bg-transparent px-3 py-3 text-sm outline-none placeholder:text-zinc-600 focus:border-paper"
             />
           </label>
           {status.text && (

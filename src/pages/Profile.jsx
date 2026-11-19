@@ -1,11 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaCloud, FaTools, FaCode, FaServer } from 'react-icons/fa';
+import { FaCloud, FaTools, FaCode, FaServer, FaPenNib, FaVideo } from 'react-icons/fa';
 import { portfolioData } from '../data/portfolioData';
 import { fadeInUp, fadeInLeft, fadeInRight, staggerContainer } from '../data/animations';
 
 const Profile = () => {
-  const { experience, skills } = portfolioData;
+  const { experience, skills, availability } = portfolioData;
 
   const certs = [
     { name: 'RHCSA', detail: 'Red Hat Certified System Administrator', badge: '/assets/RHCSA-Badge.png', verifyUrl: 'https://www.credly.com/badges/6024e930-ed6a-45c8-8b42-a9fc3bbe3a1a/public_url' },
@@ -17,6 +17,8 @@ const Profile = () => {
     if (!type) return '';
     if (type.includes('Internship'))
       return 'border-emerald-900 text-emerald-400 bg-emerald-950/60';
+    if (type.includes('Freelance'))
+      return 'border-amber-900 text-amber-400 bg-amber-950/60';
     if (type.includes('Education'))
       return 'border-sky-900 text-sky-400 bg-sky-950/60';
     return 'border-zinc-700 text-zinc-400 bg-zinc-900/60';
@@ -50,11 +52,25 @@ const Profile = () => {
         </div>
         <div className="grid content-start gap-4 lg:col-span-7 lg:gap-5">
           <p className="text-sm leading-relaxed text-mute sm:text-base lg:text-lg">
-            I am a Computer Science student focused on AWS, Linux administration, Docker, and CI/CD. I build and automate cloud environments that stay simple, reliable, and cheap to run.
+            I am a Computer Science student focused on AWS, Linux administration, Docker, and CI/CD — and a freelance developer who builds and maintains websites and apps for clients, and manages the cloud infrastructure behind them. I also write content and edit video for the same businesses.
           </p>
           <p className="text-sm leading-relaxed text-mute sm:text-base lg:text-lg">
-            The work I care about is infrastructure you can explain on a whiteboard: clear architecture, repeatable deploys, and systems that fail in an obvious way.
+            The work I care about is infrastructure you can explain on a whiteboard: clear architecture, repeatable deploys, and systems that fail in an obvious way. On the client side, that means a site or app that loads fast, reads clearly, and stays monitored after launch.
           </p>
+          <p className="text-sm leading-relaxed text-mute sm:text-base lg:text-lg">
+            I am available for full-time, part-time, remote, contract, and internship roles — and I take on freelance web, app, cloud, content, and video projects from the first draft through launch, monitoring, and maintenance.
+          </p>
+          <div className="flex flex-wrap gap-1.5 pt-1">
+            {availability.map((item) => (
+              <span
+                key={item.id}
+                className="inline-flex items-center gap-1.5 rounded-sm border border-zinc-800 bg-zinc-900/70 px-2.5 py-1 font-mono text-[8px] uppercase tracking-[0.14em] text-zinc-400 sm:text-[9px]"
+              >
+                <span className="h-1 w-1 rounded-full bg-emerald-400" />
+                {item.label}
+              </span>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -218,13 +234,15 @@ const Profile = () => {
         >
           Skills
         </motion.h2>
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-x-6 sm:gap-y-8 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-x-6 sm:gap-y-8 lg:grid-cols-3">
           {skills.map((group, idx) => {
             const categoryIcons = {
               'Cloud & Infrastructure': <FaCloud className="text-base text-mute" />,
               'DevOps & Automation': <FaTools className="text-base text-mute" />,
               'Development & Languages': <FaCode className="text-base text-mute" />,
               'Tools & Workflows': <FaServer className="text-base text-mute" />,
+              'Content & Writing': <FaPenNib className="text-base text-mute" />,
+              'Video & Graphics': <FaVideo className="text-base text-mute" />,
             };
             return (
               <motion.div

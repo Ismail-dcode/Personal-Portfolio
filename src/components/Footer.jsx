@@ -8,8 +8,8 @@ const Footer = ({ onNavigate }) => {
         <p className="font-mono text-[11px] uppercase tracking-[0.16em] text-mute">
           © {new Date().getFullYear()} Ismail Shaikh
         </p>
-        <nav className="grid grid-cols-3 gap-3 justify-self-end sm:col-span-2 sm:justify-self-end">
-          {['work', 'profile', 'contact'].map((tab) => (
+        <nav className="col-span-2 flex flex-wrap items-center gap-x-5 gap-y-1 sm:col-span-2 sm:justify-self-end">
+          {['work', 'profile', 'freelance', 'contact'].map((tab) => (
             <button
               key={tab}
               type="button"
